@@ -1,0 +1,22 @@
+{
+  "name": "alem-docs-web",
+  "version": "1.0.0",
+  "description": "Alem Docs Web project",
+  "repository": "git@github.com:wpdas/alem-docs.git",
+  "license": "MIT",
+  "scripts": {
+    "start": "NODE_ENV=development alem dev",
+    "build": "alem build"
+  },
+  "dependencies": {
+    "alem": "0.0.1-alpha.6"
+  },
+  "devDependencies": {
+    "@types/styled-components": "^5.1.26",
+    "lint-staged": "^13.2.1",
+    "prettier": "^2.8.8"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": "prettier --write --ignore-unknown"
+  }
+}

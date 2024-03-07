@@ -1,0 +1,25 @@
+{
+  "isIndex": true,
+  "account": "alem-lib.near",
+  "name": "Alem Docs",
+  "description": "Create web3 applications for NEAR BOS with a focus on performance while using concepts that are based on ReactJS.",
+  "linktree": {
+    "website": "github.com/wpdas/alem"
+  },
+  "image": {
+    "ipfs_cid": "bafkreicjdgat5xsw7vxbosoyygermawhkfi2by3ovg7c6tumrayn4rimty"
+  },
+  "tags": [
+    "alem",
+    "docs",
+    "web3",
+    "library",
+    "near",
+    "bos",
+    "react"
+  ],
+  "options": {
+    "showFallbackSpinner": false,
+    "maintainRouteWhenDeveloping": true
+  }
+}
