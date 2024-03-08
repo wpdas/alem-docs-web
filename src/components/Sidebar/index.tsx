@@ -9,11 +9,10 @@ type SidebarItemProps = {
 
 const SidebarItem = ({ to, label }: SidebarItemProps) => {
   const { pathname } = useLocation();
-  const currentPathname = pathname || RoutesPath.featureOverview.path;
 
   return (
     <RouteLink to={to}>
-      <a className={currentPathname === to ? "active" : ""}>{label}</a>
+      <a className={pathname === to ? "active" : ""}>{label}</a>
     </RouteLink>
   );
 };

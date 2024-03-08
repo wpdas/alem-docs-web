@@ -14,7 +14,7 @@ export const ConfigFilePage = getMarkdownPage(
 );
 
 export const BOSPropsPage = getMarkdownPage(
-  "https://cdn.jsdelivr.net/gh/wpdas/alem/docs/bos-overview.md",
+  "https://cdn.jsdelivr.net/gh/wpdas/alem@v0.0.1-alpha.11/docs/bos-overview.md",
 );
 
 // Router

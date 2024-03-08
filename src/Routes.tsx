@@ -16,6 +16,7 @@ import {
   UseLocationPage,
   UseParamsPage,
 } from "./pages";
+import { AboutPage } from "./pages/About/About";
 
 export const Categories = {
   gettingStarted: "Getting Started",
@@ -28,6 +29,12 @@ export const Categories = {
 export type RoutesPathProps = Record<string, { path: string; title: string; category: string }>;
 
 export const RoutesPath = {
+  // About
+  about: {
+    path: "",
+    title: "About",
+    category: Categories.gettingStarted,
+  },
   // Getting Started
   featureOverview: {
     path: "feature-overview",
@@ -116,6 +123,9 @@ export const RoutesPath = {
 
 const AppRoutes = () => {
   const routes = [
+    // About
+    createRoute(RoutesPath.about.path, AboutPage),
+
     // Getting Started
     createRoute(RoutesPath.featureOverview.path, FeatureOverviewPage),
     createRoute(RoutesPath.installation.path, InstallationPage),

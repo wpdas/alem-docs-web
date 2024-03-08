@@ -22,3 +22,21 @@ export const AppBackground = styled.div`
   bottom: 0;
   z-index: -2;
 `;
+
+export const Banner = styled.p`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  height: 40px;
+  background-color: rgb(243 244 246);
+  color: rgb(67 74 90);
+  font-weight: 500;
+  line-height: 30px;
+  width: 100%;
+
+  span {
+    color: rgb(8 126 164);
+    margin-left: 8px;
+  }
+`;
