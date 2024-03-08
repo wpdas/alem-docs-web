@@ -1,3 +1,4 @@
+import { RouteLink } from "alem";
 import {
   AboutContainer,
   AboutLogo,
@@ -8,6 +9,7 @@ import {
   AboutSectionGray,
   Code,
 } from "./styles";
+import { RoutesPath } from "@dapp/Routes";
 
 export const AboutPage = () => {
   return (
@@ -21,7 +23,9 @@ export const AboutPage = () => {
         <AboutTitle>Além</AboutTitle>
         <AboutDescription>The library for web3 NEAR BOS interfaces</AboutDescription>
         <Row>
-          <CustomButton>Learn Alem</CustomButton>
+          <RouteLink to={RoutesPath.featureOverview.path}>
+            <CustomButton>Learn Alem</CustomButton>
+          </RouteLink>
         </Row>
       </AboutContainer>
       <AboutSectionGray>

@@ -1,10 +1,12 @@
 import { Routes, createRoute } from "alem/router";
 import {
   BOSPropsPage,
+  CLIPage,
   ClearStorePage,
   ConfigFilePage,
   CreateRoutePage,
   CreatingStorePage,
+  DeployingWithGithubActionsPage,
   FeatureOverviewPage,
   GetStorePage,
   InstallationPage,
@@ -49,6 +51,16 @@ export const RoutesPath = {
   configFile: {
     path: "config-file",
     title: "Config File",
+    category: Categories.gettingStarted,
+  },
+  cli: {
+    path: "cli",
+    title: "CLI",
+    category: Categories.gettingStarted,
+  },
+  deployingWithGithubActions: {
+    path: "deploying-with-github-actions",
+    title: "Deploying with GitHub Actions",
     category: Categories.gettingStarted,
   },
 
@@ -130,6 +142,8 @@ const AppRoutes = () => {
     createRoute(RoutesPath.featureOverview.path, FeatureOverviewPage),
     createRoute(RoutesPath.installation.path, InstallationPage),
     createRoute(RoutesPath.configFile.path, ConfigFilePage),
+    createRoute(RoutesPath.cli.path, CLIPage),
+    createRoute(RoutesPath.deployingWithGithubActions.path, DeployingWithGithubActionsPage),
 
     // Router
     createRoute(RoutesPath.routes.path, RoutesPage),

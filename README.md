@@ -3,7 +3,7 @@
 
 # <div align="center">Além Docs</div>
 
-Alem is a web3 JavaScript / TypeScript library for building user interfaces for NEAR Bos dApps.
+This repository contains the documentation code for the Além library. It was built using it.
 
 [**Learn how to use Alem in your project**](https://near.org/alem-lib.near/widget/Index).
 

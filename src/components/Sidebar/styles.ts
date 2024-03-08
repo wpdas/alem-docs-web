@@ -52,3 +52,7 @@ export const SidebarContainer = styled.div`
     color: #4498e0 !important;
   }
 `;
+
+export const SidebarAboutLogo = styled.img`
+  align-self: center;
+`;

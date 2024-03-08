@@ -1,5 +1,5 @@
 import { RouteLink, useLocation } from "alem/router";
-import { SidebarContainer } from "./styles";
+import { SidebarAboutLogo, SidebarContainer } from "./styles";
 import { RoutesPath, RoutesPathProps } from "@dapp/Routes";
 
 type SidebarItemProps = {
@@ -28,6 +28,12 @@ const Sidebar = () => {
 
   return (
     <SidebarContainer>
+      <SidebarAboutLogo
+        src="https://cdn.jsdelivr.net/gh/wpdas/alem/docs/assets/near-script-logo.png"
+        width={60}
+        alt="logo"
+      />
+
       <div>
         <h3>Getting Started</h3>
         {getLinksByCategory("Getting Started")}

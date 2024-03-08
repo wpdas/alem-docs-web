@@ -17,6 +17,7 @@ export const ContentViewContainer = styled.div`
   height: fit-content;
   width: 100%;
 
+  h3,
   h2,
   h1 {
     font-weight: 700;
@@ -54,6 +55,14 @@ export const ContentViewContainer = styled.div`
 
     .language-sh {
       color: #555 !important;
+    }
+
+    .language-bash {
+      color: #555 !important;
+      > span {
+        color: #555 !important;
+        mix-blend-mode: normal;
+      }
     }
   }
 
