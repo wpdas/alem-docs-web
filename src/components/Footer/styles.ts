@@ -55,7 +55,7 @@ export const FooterSocials = styled.div`
 
 export const FooterDescription = styled.p`
   margin: 0;
-  max-width: 300px;
+  max-width: 330px;
   text-align: center;
   a {
     color: rgb(8 126 164);

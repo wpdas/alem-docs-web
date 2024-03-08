@@ -1,10 +1,10 @@
-import { loadFonts } from "alem/theme";
+import { loadFonts } from "alem/api";
 import { AppBackground, AppContainer, Banner } from "./styles";
 import Sidebar from "./components/Sidebar";
 import ContentView from "./components/ContentView";
 import Loading from "./components/Loading";
 import useAlemStore from "./stores/useAlemStore";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   const { currentVersion } = useAlemStore();

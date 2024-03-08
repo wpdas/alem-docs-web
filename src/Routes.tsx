@@ -10,6 +10,7 @@ import {
   FeatureOverviewPage,
   GetStorePage,
   InstallationPage,
+  LoadExternalStylesPage,
   LoadFontsPage,
   NavigatePage,
   PromisifyPage,
@@ -33,7 +34,7 @@ export type RoutesPathProps = Record<string, { path: string; title: string; cate
 export const RoutesPath = {
   // About
   about: {
-    path: "",
+    path: "about",
     title: "About",
     category: Categories.gettingStarted,
   },
@@ -102,6 +103,11 @@ export const RoutesPath = {
     title: "Load Fonts",
     category: Categories.apis,
   },
+  loadExternalStyles: {
+    path: "load-external-styles",
+    title: "Load External Styles",
+    category: Categories.apis,
+  },
   promisify: {
     path: "promisify",
     title: "Promisify",
@@ -155,6 +161,7 @@ const AppRoutes = () => {
 
     // APIs
     createRoute(RoutesPath.loadFonts.path, LoadFontsPage),
+    createRoute(RoutesPath.loadExternalStyles.path, LoadExternalStylesPage),
     createRoute(RoutesPath.promisify.path, PromisifyPage),
 
     // Store

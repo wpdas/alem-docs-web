@@ -20,7 +20,7 @@ const Footer = () => {
         <p>Além</p>
       </FooterLogo>
       <FooterDescription>
-        Made with ❤ by{" "}
+        Started with ❤ by{" "}
         <a href="https://www.linkedin.com/in/wenderson-pires-silva/" target="_blank">
           Wenderson Pires
         </a>{" "}
