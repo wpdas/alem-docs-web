@@ -1,14 +1,18 @@
 import { Routes, createRoute } from "alem/router";
 import {
   BOSPropsPage,
+  ClearStorePage,
   ConfigFilePage,
   CreateRoutePage,
+  CreatingStorePage,
   FeatureOverviewPage,
+  GetStorePage,
   InstallationPage,
+  LoadFontsPage,
   NavigatePage,
+  PromisifyPage,
   RouteLinkPage,
   RoutesPage,
-  StateManagementPage,
   UseLocationPage,
   UseParamsPage,
 } from "./pages";
@@ -16,6 +20,9 @@ import {
 export const Categories = {
   gettingStarted: "Getting Started",
   router: "Router",
+  apis: "APIs",
+  store: "Store",
+  bos: "BOS",
 };
 
 export type RoutesPathProps = Record<string, { path: string; title: string; category: string }>;
@@ -35,16 +42,6 @@ export const RoutesPath = {
   configFile: {
     path: "config-file",
     title: "Config File",
-    category: Categories.gettingStarted,
-  },
-  bosProps: {
-    path: "bos-props",
-    title: "BOS Props",
-    category: Categories.gettingStarted,
-  },
-  stateManagement: {
-    path: "state-management",
-    title: "State Management",
     category: Categories.gettingStarted,
   },
 
@@ -79,6 +76,42 @@ export const RoutesPath = {
     title: "Use Params",
     category: Categories.router,
   },
+
+  // APIs
+  loadFonts: {
+    path: "load-fonts",
+    title: "Load Fonts",
+    category: Categories.apis,
+  },
+  promisify: {
+    path: "promisify",
+    title: "Promisify",
+    category: Categories.apis,
+  },
+
+  // Store
+  creatingStore: {
+    path: "creating-a-store",
+    title: "Creating Store",
+    category: Categories.store,
+  },
+  getStore: {
+    path: "get-store",
+    title: "Get Store",
+    category: Categories.store,
+  },
+  clearStore: {
+    path: "clear-store",
+    title: "Clear Store",
+    category: Categories.store,
+  },
+
+  // BOS API
+  bosProps: {
+    path: "bos-props",
+    title: "APIs and Components",
+    category: Categories.bos,
+  },
 };
 
 const AppRoutes = () => {
@@ -87,8 +120,6 @@ const AppRoutes = () => {
     createRoute(RoutesPath.featureOverview.path, FeatureOverviewPage),
     createRoute(RoutesPath.installation.path, InstallationPage),
     createRoute(RoutesPath.configFile.path, ConfigFilePage),
-    createRoute(RoutesPath.bosProps.path, BOSPropsPage),
-    createRoute(RoutesPath.stateManagement.path, StateManagementPage),
 
     // Router
     createRoute(RoutesPath.routes.path, RoutesPage),
@@ -97,6 +128,18 @@ const AppRoutes = () => {
     createRoute(RoutesPath.navigate.path, NavigatePage),
     createRoute(RoutesPath.useLocation.path, UseLocationPage),
     createRoute(RoutesPath.useParams.path, UseParamsPage),
+
+    // APIs
+    createRoute(RoutesPath.loadFonts.path, LoadFontsPage),
+    createRoute(RoutesPath.promisify.path, PromisifyPage),
+
+    // Store
+    createRoute(RoutesPath.creatingStore.path, CreatingStorePage),
+    createRoute(RoutesPath.getStore.path, GetStorePage),
+    createRoute(RoutesPath.clearStore.path, ClearStorePage),
+
+    // BOS API
+    createRoute(RoutesPath.bosProps.path, BOSPropsPage),
   ];
 
   return <Routes routes={routes} type="ContentBased" />;

@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const AppContainer = styled.div`
   display: flex;
   flex-direction: row;
-  font-family: "Open Sans", sans-serif;
+  /* font-family: "Open Sans", sans-serif; */
+  font-family: "Wix Madefor Display", sans-serif;
 
   @media (max-width: 800px) {
     flex-wrap: wrap;
@@ -11,8 +12,9 @@ export const AppContainer = styled.div`
 `;
 
 export const AppBackground = styled.div`
-  background-color: #282c34;
-  background-image: linear-gradient(180deg, #525a6b 0%, #000000 100%);
+  background-color: #fff;
+  /* background-color: #282c34; */
+  /* background-image: linear-gradient(180deg, #525a6b 0%, #000000 100%); */
   position: fixed;
   top: 0;
   left: 0;

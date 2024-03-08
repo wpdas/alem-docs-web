@@ -6,7 +6,8 @@ import Loading from "./components/Loading";
 
 const App = () => {
   const fontsLoaded = loadFonts([
-    "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap",
+    "https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap",
+    "https://fonts.cdnfonts.com/css/source-code-pro",
   ]);
 
   if (!fontsLoaded) {

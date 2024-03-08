@@ -35,6 +35,12 @@ const Sidebar = () => {
       </div>
 
       <div>
+        <h3>Store</h3>
+
+        {getLinksByCategory("Store")}
+      </div>
+
+      <div>
         <h3>Router</h3>
         {getLinksByCategory("Router")}
       </div>
@@ -42,25 +48,13 @@ const Sidebar = () => {
       <div>
         <h3>APIs</h3>
 
-        <a href="#">Some item</a>
+        {getLinksByCategory("APIs")}
       </div>
 
       <div>
-        <h3>Hooks</h3>
+        <h3>NEAR VM (BOS)</h3>
 
-        <a href="#">Some item</a>
-      </div>
-
-      <div>
-        <h3>BOS Api</h3>
-
-        <a href="#">Some item</a>
-      </div>
-
-      <div>
-        <h3>BOS Components</h3>
-
-        <a href="#">Some item</a>
+        {getLinksByCategory("BOS")}
       </div>
     </SidebarContainer>
   );

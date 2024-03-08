@@ -2,7 +2,7 @@ import getMarkdownPage from "./getMarkdownPage";
 
 // Getting Started
 export const FeatureOverviewPage = getMarkdownPage(
-  "https://cdn.jsdelivr.net/gh/wpdas/alem/docs/feature-overview.md",
+  "https://cdn.jsdelivr.net/gh/wpdas/alem@v0.0.1-alpha.11/docs/feature-overview.md",
 );
 
 export const InstallationPage = getMarkdownPage(
@@ -15,10 +15,6 @@ export const ConfigFilePage = getMarkdownPage(
 
 export const BOSPropsPage = getMarkdownPage(
   "https://cdn.jsdelivr.net/gh/wpdas/alem/docs/bos-overview.md",
-);
-
-export const StateManagementPage = getMarkdownPage(
-  "https://cdn.jsdelivr.net/gh/wpdas/alem/docs/state-management.md",
 );
 
 // Router
@@ -44,4 +40,28 @@ export const UseLocationPage = getMarkdownPage(
 
 export const UseParamsPage = getMarkdownPage(
   "https://cdn.jsdelivr.net/gh/wpdas/alem/docs/router/use-params.md",
+);
+
+// APIs
+
+export const LoadFontsPage = getMarkdownPage(
+  "https://cdn.jsdelivr.net/gh/wpdas/alem/docs/api/load-fonts.md",
+);
+
+export const PromisifyPage = getMarkdownPage(
+  "https://cdn.jsdelivr.net/gh/wpdas/alem/docs/api/promisify.md",
+);
+
+// Store
+
+export const CreatingStorePage = getMarkdownPage(
+  "https://cdn.jsdelivr.net/gh/wpdas/alem/docs/store/creating-a-store.md",
+);
+
+export const GetStorePage = getMarkdownPage(
+  "https://cdn.jsdelivr.net/gh/wpdas/alem/docs/store/get-store.md",
+);
+
+export const ClearStorePage = getMarkdownPage(
+  "https://cdn.jsdelivr.net/gh/wpdas/alem/docs/store/clear-store.md",
 );

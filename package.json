@@ -2,14 +2,14 @@
   "name": "alem-docs-web",
   "version": "1.0.0",
   "description": "Alem Docs Web project",
-  "repository": "git@github.com:wpdas/alem-docs.git",
+  "repository": "https://github.com/wpdas/alem-docs-web.git",
   "license": "MIT",
   "scripts": {
     "start": "NODE_ENV=development alem dev",
     "build": "alem build"
   },
   "dependencies": {
-    "alem": "0.0.1-alpha.6"
+    "alem": "0.0.1-alpha.11"
   },
   "devDependencies": {
     "@types/styled-components": "^5.1.26",
