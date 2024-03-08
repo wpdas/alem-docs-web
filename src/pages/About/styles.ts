@@ -43,6 +43,25 @@ export const CustomButton = styled.button`
   }
 `;
 
+export const CustomLink = styled.a`
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  border: 1px solid rgb(8 126 164);
+  background-color: rgb(8 126 164);
+  margin-right: 12px;
+
+  p {
+    color: #fff !important;
+    margin: 0;
+    font-weight: 700 !important;
+    font-size: 17px;
+  }
+
+  :hover {
+    background-color: rgb(8 126 164);
+  }
+`;
+
 export const AboutSectionGray = styled.div`
   background-color: rgb(188 193 205 / 12%);
   display: flex;

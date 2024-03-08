@@ -17,13 +17,17 @@ export const ContentViewContainer = styled.div`
   height: fit-content;
   width: 100%;
 
+  h4,
   h3,
   h2,
   h1 {
     font-weight: 700;
     font-size: 22px;
-    /* color: #292929; */
     color: rgb(35, 39, 47);
+  }
+
+  h4 {
+    font-size: 16px;
   }
 
   code {

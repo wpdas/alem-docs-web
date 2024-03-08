@@ -5,9 +5,7 @@ export const SidebarContainer = styled.div`
   flex-direction: column;
   gap: 16px;
   background: #fff;
-  /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
-  /* border-radius: 8px; */
-  border-right: rgba(41, 41, 41, 0.2) solid 1px;
+  border-right: rgb(224 226 229) solid 1px;
   min-width: 240px;
   width: 240px;
   padding: 0px 17px 30px;

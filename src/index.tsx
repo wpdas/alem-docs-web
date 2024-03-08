@@ -4,6 +4,7 @@ import Sidebar from "./components/Sidebar";
 import ContentView from "./components/ContentView";
 import Loading from "./components/Loading";
 import useAlemStore from "./stores/useAlemStore";
+import Footer from "./components/Footer";
 
 const App = () => {
   const { currentVersion } = useAlemStore();
@@ -27,6 +28,7 @@ const App = () => {
         <ContentView />
         <AppBackground />
       </AppContainer>
+      <Footer />
     </div>
   );
 };
