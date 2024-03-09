@@ -7,6 +7,7 @@ import {
   FooterLogo,
   FooterSocials,
 } from "./styles";
+import { Row } from "../UI";
 
 const Footer = () => {
   return (
@@ -19,18 +20,26 @@ const Footer = () => {
         />
         <p>Além</p>
       </FooterLogo>
-      <FooterDescription>
-        Started with ❤ by{" "}
-        <a href="https://www.linkedin.com/in/wenderson-pires-silva/" target="_blank">
-          Wenderson Pires
-        </a>{" "}
-        <a
-          href="https://near.org/near/widget/ProfilePage?accountId=wendersonpires.near"
-          target="_blank"
-        >
-          wendersonpires.near
-        </a>
-      </FooterDescription>
+      <Row>
+        <FooterDescription>
+          This library is still under development.
+          <a
+            href="https://near.org/near/widget/ProfilePage?accountId=wendersonpires.near"
+            target="_blank"
+          >
+            wendersonpires.near
+          </a>
+        </FooterDescription>
+        <FooterDescription>
+          This library is still under development.
+          <a
+            href="https://near.org/near/widget/ProfilePage?accountId=wendersonpires.near"
+            target="_blank"
+          >
+            wendersonpires.near
+          </a>
+        </FooterDescription>
+      </Row>
       <FooterSocials>
         <FooterItem href="https://t.me/alemlib" target="_blank">
           <TelegramIcon />

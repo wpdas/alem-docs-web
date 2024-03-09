@@ -4,13 +4,13 @@ import {
   AboutLogo,
   AboutTitle,
   AboutDescription,
-  Row,
   CustomButton,
   AboutSectionGray,
   Code,
   CustomLink,
 } from "./styles";
 import { RoutesPath } from "@dapp/Routes";
+import { Row } from "@dapp/components/UI";
 
 export const AboutPage = () => {
   return (

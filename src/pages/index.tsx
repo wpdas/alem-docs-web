@@ -55,10 +55,6 @@ export const UseParamsPage = getMarkdownPage(
 
 // APIs
 
-export const LoadFontsPage = getMarkdownPage(
-  `https://cdn.jsdelivr.net/gh/wpdas/alem@${currentVersion}/docs/api/load-fonts.md`,
-);
-
 export const LoadExternalStylesPage = getMarkdownPage(
   `https://cdn.jsdelivr.net/gh/wpdas/alem@${currentVersion}/docs/api/load-external-styles.md`,
 );

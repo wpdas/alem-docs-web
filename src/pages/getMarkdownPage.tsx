@@ -1,26 +1,42 @@
 import Spinner from "@dapp/components/Spinner";
-import { Markdown, fetch } from "alem/bos";
-import styled from "styled-components";
+import { Markdown, clipboard, fetch } from "alem/bos";
+import { TopSection, Margin, ShareButton, SpinnerWrapper } from "./styles";
+import ShareIcon from "@dapp/assets/svgs/share-icon";
+import { isDevelopment, useLocation } from "alem";
 
 const getMarkdownPage = (mdFileURL: string) => {
-  const SpinnerWrapper = styled.div`
-    margin: 200px 0;
-  `;
-
   return () => {
     const mdContent = fetch(mdFileURL).body;
 
-    if (!mdContent) {
-      return (
-        <SpinnerWrapper>
-          <Spinner dark />
-        </SpinnerWrapper>
-      );
-    }
+    const { pathname } = useLocation();
+    const origin = isDevelopment ? "http://127.0.0.1:8080" : "https://near.org";
+
+    const copyToCliboard = () => {
+      clipboard.writeText(`${origin}/alem-lib.near/widget/Index?section=${pathname}`);
+    };
 
     return (
       <>
-        <Markdown text={mdContent} />
+        <TopSection>
+          <div>
+            <ShareButton
+              data-bs-toggle="modal"
+              data-bs-target="#sharedInfoModal"
+              onClick={copyToCliboard}
+            >
+              <ShareIcon />
+              Share
+            </ShareButton>
+          </div>
+        </TopSection>
+        <Margin />
+        {mdContent ? (
+          <Markdown text={mdContent} />
+        ) : (
+          <SpinnerWrapper>
+            <Spinner dark />
+          </SpinnerWrapper>
+        )}
       </>
     );
   };

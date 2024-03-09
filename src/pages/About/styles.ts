@@ -25,10 +25,6 @@ export const AboutDescription = styled.h3`
   margin-bottom: 34px;
 `;
 
-export const Row = styled.div`
-  display: flex;
-`;
-
 export const CustomButton = styled.button`
   padding: 0.75rem 1.5rem;
   border-radius: 30px;

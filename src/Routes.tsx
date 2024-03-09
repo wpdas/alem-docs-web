@@ -11,7 +11,6 @@ import {
   GetStorePage,
   InstallationPage,
   LoadExternalStylesPage,
-  LoadFontsPage,
   NavigatePage,
   PromisifyPage,
   RouteLinkPage,
@@ -20,6 +19,7 @@ import {
   UseParamsPage,
 } from "./pages";
 import { AboutPage } from "./pages/About/About";
+import { createStore } from "alem";
 
 export const Categories = {
   gettingStarted: "Getting Started",
@@ -98,11 +98,6 @@ export const RoutesPath = {
   },
 
   // APIs
-  loadFonts: {
-    path: "load-fonts",
-    title: "Load Fonts",
-    category: Categories.apis,
-  },
   loadExternalStyles: {
     path: "load-external-styles",
     title: "Load External Styles",
@@ -160,7 +155,6 @@ const AppRoutes = () => {
     createRoute(RoutesPath.useParams.path, UseParamsPage),
 
     // APIs
-    createRoute(RoutesPath.loadFonts.path, LoadFontsPage),
     createRoute(RoutesPath.loadExternalStyles.path, LoadExternalStylesPage),
     createRoute(RoutesPath.promisify.path, PromisifyPage),
 
@@ -173,7 +167,35 @@ const AppRoutes = () => {
     createRoute(RoutesPath.bosProps.path, BOSPropsPage),
   ];
 
+  // OBS: ISSO AQUI NAO quebra o useState dentro do AboutPage quando esta so
+  // o AboutPage sendo mostrado (sem Routes)
+  // setTimeout(() => {
+  //   const teste = useStore("teste");
+  //   console.log("TIMEOUT", teste);
+  //   teste.update({ count: 80 });
+  // }, 2000);
+
+  // OBS: (Alterando o alemRoute) TAMBEM NAO quebra o useState quando usando somente
+  // o AboutPage,
+  // setTimeout(() => {
+  //   const teste = useAlemLibRoutesStore();
+  //   console.log("TIMEOUT", teste);
+  //   teste.update({ activeRoute: "about" });
+  //   console.log("TIMEOUT 2", teste);
+  // }, 2000);
+
+  // o useState funciona quando nao esta usando o Routes
+  // o useState quebra quando o Routes atualiza o estado dentro do useAlemLibRoutesStore
+  // return <AboutPage />;
+
+  // OBS: Ta quebrando mesmo quando o State.update() nao ta sendo chamado
+  // no stateManager
+
+  // OBS; Testar => fazer uma lógica para permitir o Routes rodar apenas uma vez sua lógica
+  // RESULTADO: NAO RESOLVEU
+
   return <Routes routes={routes} type="ContentBased" />;
+  // return <Routes routes={routes} type="URLBased" />;
 };
 
 export default AppRoutes;

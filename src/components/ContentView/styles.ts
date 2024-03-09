@@ -41,7 +41,6 @@ export const ContentViewContainer = styled.div`
   pre {
     div {
       background-color: #fafafa !important;
-      /* background-color: #292929 !important; */
       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
       border-radius: 8px;
       margin: 8px !important;
