@@ -30,7 +30,7 @@ const ContentView = () => {
       setTimeout(() => {
         console.log("FOI");
         navigate(urlParams.section);
-      }, 100);
+      }, 0);
       setSectionUsed(true);
     }
   }, [urlParams, sectionUsed, isRoutesReady]);
