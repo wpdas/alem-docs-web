@@ -42,9 +42,9 @@ const App = () => {
       <AppContainer>
         <Sidebar />
         <ContentView />
-        <AppBackground />
       </AppContainer>
       <Footer />
+      <AppBackground />
     </div>
   );
 };

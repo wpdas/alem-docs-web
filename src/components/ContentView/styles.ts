@@ -8,14 +8,15 @@ export const ContentViewContainer = styled.div`
   /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
   /* border-radius: 8px; */
   min-width: 240px;
-  width: 240px;
   padding: 40px 17px 30px;
   z-index: 1;
   bottom: 0;
   margin-bottom: 40px;
-  margin-left: 16px;
   height: fit-content;
   width: 100%;
+  max-width: 1046px;
+  margin-left: auto;
+  margin-right: auto;
 
   h4,
   h3,

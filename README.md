@@ -5,7 +5,7 @@
 
 This repository contains the documentation code for the Além library. It was built using it.
 
-[**Learn how to use Alem in your project**](https://near.org/alem-lib.near/widget/Index).
+[**Learn how to use Alem in your project**](https://alem.dev).
 
 ## License
 

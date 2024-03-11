@@ -9,10 +9,12 @@ const getMarkdownPage = (mdFileURL: string) => {
     const mdContent = fetch(mdFileURL).body;
 
     const { pathname } = useLocation();
-    const origin = isDevelopment ? "http://127.0.0.1:8080" : "https://near.social";
+    const site = isDevelopment
+      ? "http://127.0.0.1:8080/alem-lib.near/widget/Index"
+      : "https://alem.dev/";
 
     const copyToCliboard = () => {
-      clipboard.writeText(`${origin}/alem-lib.near/widget/Index?section=${pathname}`);
+      clipboard.writeText(`${site}?section=${pathname}`);
     };
 
     return (

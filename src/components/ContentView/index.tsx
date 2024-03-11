@@ -19,6 +19,7 @@ const ContentView = () => {
 
   // Watch the section parameter.
   const urlParams = useParams();
+  console.log(urlParams);
   const { isRoutesReady } = useLocation();
 
   useEffect(() => {

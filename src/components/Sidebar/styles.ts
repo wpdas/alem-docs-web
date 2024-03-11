@@ -10,6 +10,7 @@ export const SidebarContainer = styled.div`
   width: 240px;
   padding: 0px 17px 30px;
   margin-top: 40px;
+  margin-right: 16px;
   z-index: 1;
   bottom: 0;
   margin-bottom: 40px;
