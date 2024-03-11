@@ -14,6 +14,7 @@ import {
   LoadExternalStylesPage,
   NavigatePage,
   PromisifyPage,
+  IsDevelopmentPage,
   RouteLinkPage,
   RoutesPage,
   UseLocationPage,
@@ -115,6 +116,11 @@ export const RoutesPath = {
     title: "Promisify",
     category: Categories.apis,
   },
+  isDevelopment: {
+    path: "is-development",
+    title: "Is Development",
+    category: Categories.apis,
+  },
 
   // Store
   creatingStore: {
@@ -165,6 +171,7 @@ const AppRoutes = () => {
     // APIs
     createRoute(RoutesPath.loadExternalStyles.path, LoadExternalStylesPage),
     createRoute(RoutesPath.promisify.path, PromisifyPage),
+    createRoute(RoutesPath.isDevelopment.path, IsDevelopmentPage),
 
     // Store
     createRoute(RoutesPath.creatingStore.path, CreatingStorePage),

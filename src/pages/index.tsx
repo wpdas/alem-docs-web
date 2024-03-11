@@ -67,6 +67,10 @@ export const PromisifyPage = getMarkdownPage(
   `https://cdn.jsdelivr.net/gh/wpdas/alem@${currentVersion}/docs/api/promisify.md`,
 );
 
+export const IsDevelopmentPage = getMarkdownPage(
+  `https://cdn.jsdelivr.net/gh/wpdas/alem@${currentVersion}/docs/api/is-development.md`,
+);
+
 // Store
 
 export const CreatingStorePage = getMarkdownPage(
