@@ -21,16 +21,9 @@ const ContentView = () => {
   const urlParams = useParams();
   const { isRoutesReady, routes } = useLocation();
 
-  console.log(urlParams, sectionUsed, isRoutesReady, routes);
-
   useEffect(() => {
-    console.log("A", urlParams);
     if (urlParams.section && !sectionUsed && isRoutesReady) {
-      console.log("B", urlParams);
-      setTimeout(() => {
-        console.log("FOI");
-        navigate(urlParams.section);
-      }, 0);
+      navigate(urlParams.section);
       setSectionUsed(true);
     }
   }, [urlParams, sectionUsed, isRoutesReady]);
