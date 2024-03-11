@@ -1,4 +1,4 @@
-import TelegramIcon from "@dapp/assets/svgs/telegram-icon";
+import TelegramIcon from "../../assets/svgs/telegram-icon";
 import { GithubIcon } from "../../assets/svgs/github-icon";
 import {
   FooterContainer,
@@ -7,9 +7,19 @@ import {
   FooterLogo,
   FooterSocials,
 } from "./styles";
+import styled from "styled-components";
 import { Row } from "../UI";
 
 const Footer = () => {
+  // const Row = styled.div`
+  //   display: flex;
+  // `;
+
+  // const Column = styled.div`
+  //   display: flex;
+  //   flex-direction: column;
+  // `;
+
   return (
     <FooterContainer>
       <FooterLogo>
@@ -21,15 +31,6 @@ const Footer = () => {
         <p>Além</p>
       </FooterLogo>
       <Row>
-        <FooterDescription>
-          This library is still under development.
-          <a
-            href="https://near.org/near/widget/ProfilePage?accountId=wendersonpires.near"
-            target="_blank"
-          >
-            wendersonpires.near
-          </a>
-        </FooterDescription>
         <FooterDescription>
           This library is still under development.
           <a

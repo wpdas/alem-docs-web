@@ -1,4 +1,4 @@
-import ShareIcon from "@dapp/assets/svgs/share-icon";
+import ShareIcon from "../../assets/svgs/share-icon";
 
 const SharedInfoModal = () => {
   return (

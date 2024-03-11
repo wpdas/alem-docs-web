@@ -9,8 +9,8 @@ import {
   Code,
   CustomLink,
 } from "./styles";
-import { RoutesPath } from "@dapp/Routes";
-import { Row } from "@dapp/components/UI";
+import { RoutesPath } from "../../Routes";
+import { Row } from "../../components/UI";
 
 export const AboutPage = () => {
   return (
@@ -39,6 +39,14 @@ export const AboutPage = () => {
           Alem lets you build user interfaces out of individual pieces called components. Create
           your own components like <Code>Thumbnail</Code>, <Code>LikeButton</Code>, and{" "}
           <Code>Avatar</Code>. Then combine them into entire screens, pages, and other components.
+        </p>
+      </AboutSectionGray>
+      <AboutSectionGray style={{ backgroundColor: "#fff" }}>
+        <AboutTitle>Good Practices</AboutTitle>
+        <p>
+          All project content will be organized in just one file. Be aware of this when developing
+          your application. Whenever possible, use functions that return the desired content to
+          avoid possible issues in the application.
         </p>
       </AboutSectionGray>
     </div>

@@ -7,6 +7,7 @@ import {
   CreateRoutePage,
   CreatingStorePage,
   DeployingWithGithubActionsPage,
+  // RoadmapPage,
   FeatureOverviewPage,
   GetStorePage,
   InstallationPage,
@@ -20,6 +21,7 @@ import {
 } from "./pages";
 import { AboutPage } from "./pages/About/About";
 import { createStore } from "alem";
+// import { buildMarkdownPages } from "./pages";
 
 export const Categories = {
   gettingStarted: "Getting Started",
@@ -64,6 +66,11 @@ export const RoutesPath = {
     title: "Deploying with GitHub Actions",
     category: Categories.gettingStarted,
   },
+  // roadmap: {
+  //   path: "roadmap",
+  //   title: "Roadmap",
+  //   category: Categories.gettingStarted,
+  // },
 
   // Router
   routes: {
@@ -145,6 +152,7 @@ const AppRoutes = () => {
     createRoute(RoutesPath.configFile.path, ConfigFilePage),
     createRoute(RoutesPath.cli.path, CLIPage),
     createRoute(RoutesPath.deployingWithGithubActions.path, DeployingWithGithubActionsPage),
+    // createRoute(RoutesPath.roadmap.path, RoadmapPage),
 
     // Router
     createRoute(RoutesPath.routes.path, RoutesPage),
@@ -167,35 +175,7 @@ const AppRoutes = () => {
     createRoute(RoutesPath.bosProps.path, BOSPropsPage),
   ];
 
-  // OBS: ISSO AQUI NAO quebra o useState dentro do AboutPage quando esta so
-  // o AboutPage sendo mostrado (sem Routes)
-  // setTimeout(() => {
-  //   const teste = useStore("teste");
-  //   console.log("TIMEOUT", teste);
-  //   teste.update({ count: 80 });
-  // }, 2000);
-
-  // OBS: (Alterando o alemRoute) TAMBEM NAO quebra o useState quando usando somente
-  // o AboutPage,
-  // setTimeout(() => {
-  //   const teste = useAlemLibRoutesStore();
-  //   console.log("TIMEOUT", teste);
-  //   teste.update({ activeRoute: "about" });
-  //   console.log("TIMEOUT 2", teste);
-  // }, 2000);
-
-  // o useState funciona quando nao esta usando o Routes
-  // o useState quebra quando o Routes atualiza o estado dentro do useAlemLibRoutesStore
-  // return <AboutPage />;
-
-  // OBS: Ta quebrando mesmo quando o State.update() nao ta sendo chamado
-  // no stateManager
-
-  // OBS; Testar => fazer uma lógica para permitir o Routes rodar apenas uma vez sua lógica
-  // RESULTADO: NAO RESOLVEU
-
   return <Routes routes={routes} type="ContentBased" />;
-  // return <Routes routes={routes} type="URLBased" />;
 };
 
 export default AppRoutes;

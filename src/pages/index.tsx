@@ -1,4 +1,4 @@
-import useAlemStore from "@dapp/stores/useAlemStore";
+import useAlemStore from "../stores/useAlemStore";
 import getMarkdownPage from "./getMarkdownPage";
 
 const { currentVersion } = useAlemStore();
@@ -27,6 +27,10 @@ export const CLIPage = getMarkdownPage(
 export const DeployingWithGithubActionsPage = getMarkdownPage(
   `https://cdn.jsdelivr.net/gh/wpdas/alem@${currentVersion}/docs/deploying-with-github-actions.md`,
 );
+
+// export const RoadmapPage = getMarkdownPage(
+//   `https://cdn.jsdelivr.net/gh/wpdas/alem@${currentVersion}/roadmap.md`,
+// );
 
 // Router
 export const RoutesPage = getMarkdownPage(

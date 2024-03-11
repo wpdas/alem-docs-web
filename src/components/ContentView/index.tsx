@@ -1,6 +1,6 @@
-import AppRoutes from "@dapp/Routes";
+import AppRoutes from "../../Routes";
 import { ContentViewContainer } from "./styles";
-import { navigate, useEffect, useParams, useState, useStore } from "alem";
+import { navigate, useEffect, useLocation, useParams, useState, useStore } from "alem";
 
 const ContentView = () => {
   // BOS -- ALEM: Usado para testar useState / useEffect
@@ -19,13 +19,14 @@ const ContentView = () => {
 
   // Watch the section parameter.
   const urlParams = useParams();
+  const { isRoutesReady } = useLocation();
 
   useEffect(() => {
-    if (urlParams.section && !sectionUsed) {
+    if (urlParams.section && !sectionUsed && isRoutesReady) {
       navigate(urlParams.section);
       setSectionUsed(true);
     }
-  }, [urlParams, sectionUsed]);
+  }, [urlParams, sectionUsed, isRoutesReady]);
 
   return (
     <ContentViewContainer>

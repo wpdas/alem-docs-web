@@ -1,6 +1,6 @@
 import { RouteLink, useLocation } from "alem/router";
 import { SidebarAboutLogo, SidebarContainer } from "./styles";
-import { RoutesPath, RoutesPathProps } from "@dapp/Routes";
+import { RoutesPath, RoutesPathProps } from "../../Routes";
 
 type SidebarItemProps = {
   to: string;

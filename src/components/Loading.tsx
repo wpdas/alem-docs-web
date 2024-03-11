@@ -1,4 +1,4 @@
-import { AppBackground, AppContainer } from "@dapp/styles";
+import { AppBackground, AppContainer } from "../styles";
 import Spinner from "./Spinner";
 
 const Loading = () => {

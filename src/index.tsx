@@ -1,11 +1,24 @@
-import { loadExternalStyles } from "alem/api";
 import { AppBackground, AppContainer, Banner } from "./styles";
 import Sidebar from "./components/Sidebar";
 import ContentView from "./components/ContentView";
 import Loading from "./components/Loading";
-import useAlemStore from "./stores/useAlemStore";
 import Footer from "./components/Footer/Footer";
 import Modals from "./components/Modals/Modals";
+import useAlemStore from "./stores/useAlemStore";
+import { loadExternalStyles } from "alem";
+// TODO: Remover comentarios antes de processar
+// imports comentados sao levados em conta.
+// import { Row } from "./components/UI";
+
+// TODO:
+/**
+ * Uma idea para usar vars com mesmo nome é:
+ * 1 - Ler o conteudo de um arquivo e ver se a const já existe,
+ * 2 - Caso exista, renomear a var do arquivo atual (c duplicidade) para um nome
+ * aleatório, ex: Row_abc (usar um hash pra isso)
+ * 2.2 - Ir em todos os arquivos que dependem desta var modificada, e mudar o nome
+ * neles também para referenciar o objeto correto.
+ */
 
 const App = () => {
   const { currentVersion } = useAlemStore();
@@ -37,20 +50,3 @@ const App = () => {
 };
 
 export default App;
-
-// const [valor, setValor] = useState(1);
-
-// console.log(valor);
-
-// return (
-//   <button
-//     onClick={() => {
-//       setValor(valor + 1);
-//     }}
-//   >
-//     {valor}
-//   </button>
-// );
-// setInterval(() => {
-//   setValor(valor + 1);
-// }, 1000);
