@@ -17,6 +17,16 @@ export const Container = styled.p`
     color: rgb(8 126 164);
     margin-left: 8px;
   }
+
+  @media screen and (max-width: 1049px) {
+    padding: 22px 10px;
+  }
+
+  @media screen and (max-width: 796px) {
+    padding: 22px 10px;
+    flex-direction: column;
+    gap: 26px;
+  }
 `;
 
 export const Item = styled.a`

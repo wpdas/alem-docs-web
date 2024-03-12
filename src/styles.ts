@@ -40,3 +40,17 @@ export const Banner = styled.p`
     margin-left: 8px;
   }
 `;
+
+export const MobileNavBarSwitcher = styled.div`
+  display: none;
+  @media (max-width: 800px) {
+    display: flex;
+  }
+`;
+
+export const SideBarSwitcher = styled.div`
+  display: flex;
+  @media (max-width: 800px) {
+    display: none;
+  }
+`;

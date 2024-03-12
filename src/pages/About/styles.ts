@@ -58,7 +58,7 @@ export const CustomLink = styled.a`
   }
 `;
 
-export const SectionGray = styled.div`
+export const Section = styled.div`
   background-color: rgb(188 193 205 / 12%);
   display: flex;
   flex-direction: column;

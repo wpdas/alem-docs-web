@@ -5,7 +5,7 @@ import {
   Title,
   Description,
   CustomButton,
-  SectionGray,
+  Section,
   Code,
   CustomLink,
 } from "./styles";
@@ -33,23 +33,29 @@ export const AboutPage = () => {
           </RouteLink>
         </Row>
       </Container>
-      <SectionGray>
+      <Section>
         <Title>Create user interfaces from components</Title>
         <p>
-          Alem use its compiler to let you build user interfaces out of individual pieces called
-          components. Create your own components like <Code>Thumbnail</Code>,{" "}
-          <Code>LikeButton</Code>, and <Code>Avatar</Code>. Then combine them into entire screens,
-          pages, and other components.
+          Alem use its compiler to let you build user interfaces out of individual pieces. Create
+          your own components like <Code>Thumbnail</Code>, <Code>LikeButton</Code>, and{" "}
+          <Code>Avatar</Code>. Then combine them into entire screens, pages, and other components.
         </p>
-      </SectionGray>
-      <SectionGray style={{ backgroundColor: "#fff" }}>
+      </Section>
+      <Section style={{ backgroundColor: "#fff" }}>
+        <Title>Network</Title>
+        <p>
+          Currently supports <Code>Mainnet</Code> and <Code>Testnet</Code>. So, while you are
+          developing and testing features you can test everything without worrying about expenses.
+        </p>
+      </Section>
+      <Section>
         <Title>Good Practices</Title>
         <p>
           All project content will be organized in just one file. Be aware of this when developing
           your application. Whenever possible, use functions that return the desired content to
           avoid possible issues in the application.
         </p>
-      </SectionGray>
+      </Section>
     </div>
   );
 };

@@ -1,8 +1,9 @@
 {
   "isIndex": true,
-  "account": "alem-lib.near",
+  "mainnetAccount": "alem-lib.near",
+  "testnetAccount": "alem-lib.testnet",
   "name": "Alem Docs",
-  "description": "Alem is a web3 JavaScript / TypeScript library for building applications for NEAR BOS with a focus on performance and friendly development.",
+  "description": "Além is a web3 **JavaScript** / **TypeScript** library for building applications for NEAR BOS with a focus on performance and friendly development.",
   "linktree": {
     "website": "github.com/wpdas/alem"
   },

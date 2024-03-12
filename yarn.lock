@@ -119,10 +119,10 @@ accepts@~1.3.4, accepts@~1.3.8:
     mime-types "~2.1.34"
     negotiator "0.6.3"
 
-alem@0.0.1-alpha.6:
-  version "0.0.1-alpha.6"
-  resolved "https://registry.yarnpkg.com/alem/-/alem-0.0.1-alpha.6.tgz#b35b35db2aeb583f78ded39cb03dadc11a694338"
-  integrity sha512-k6UqhuMS5bYyUpdlKYEwmIL/xzWLV8as1JcVQ7tGgYSO3Tam0A5867fa5Hg2INY1dkND2nCFdR65M7JV1L9Gvg==
+alem@0.0.1-alpha.21:
+  version "0.0.1-alpha.21"
+  resolved "https://registry.yarnpkg.com/alem/-/alem-0.0.1-alpha.21.tgz#97db000e12ecfd9d39e9406044f4f10844efc7b2"
+  integrity sha512-Lsd2v1wbuDNe7iXOCaDdi/YVcb0n/DOGz3qgCFLWlbr1cmDhiRTJ+JBa4HgZShjXdOi/WD2ahZhAQoLWkcHvjQ==
   dependencies:
     bos-cli "^0.3.6"
     chokidar "^3.5.3"
