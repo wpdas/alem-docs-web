@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FooterContainer = styled.p`
+export const Container = styled.p`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,7 +19,7 @@ export const FooterContainer = styled.p`
   }
 `;
 
-export const FooterItem = styled.a`
+export const Item = styled.a`
   font-size: 16px;
   line-height: 24px;
   text-align: center;
@@ -32,7 +32,7 @@ export const FooterItem = styled.a`
   }
 `;
 
-export const FooterLogo = styled.div`
+export const Logo = styled.div`
   display: flex;
   justify-content: center;
   p {
@@ -40,7 +40,7 @@ export const FooterLogo = styled.div`
   }
 `;
 
-export const FooterSocials = styled.div`
+export const Socials = styled.div`
   display: flex;
   width: 200px;
   justify-content: space-between;
@@ -53,7 +53,7 @@ export const FooterSocials = styled.div`
   }
 `;
 
-export const FooterDescription = styled.p`
+export const Description = styled.p`
   margin: 0;
   max-width: 430px;
   text-align: center;

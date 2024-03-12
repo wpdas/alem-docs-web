@@ -1,24 +1,24 @@
 import styled from "styled-components";
 
-export const AboutContainer = styled.div`
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 90px;
 `;
 
-export const AboutLogo = styled.img`
+export const Logo = styled.img`
   pointer-events: none;
   margin-bottom: 20px;
   border-radius: 999px;
 `;
 
-export const AboutTitle = styled.h1`
+export const Title = styled.h1`
   font-size: 42px !important;
   margin-bottom: 14px;
 `;
 
-export const AboutDescription = styled.h3`
+export const Description = styled.h3`
   font-size: 28px !important;
   font-weight: 600;
   color: rgb(67 74 90);
@@ -58,7 +58,7 @@ export const CustomLink = styled.a`
   }
 `;
 
-export const AboutSectionGray = styled.div`
+export const SectionGray = styled.div`
   background-color: rgb(188 193 205 / 12%);
   display: flex;
   flex-direction: column;

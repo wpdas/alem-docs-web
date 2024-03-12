@@ -1,5 +1,5 @@
 import { RouteLink, useLocation } from "alem/router";
-import { SidebarAboutLogo, SidebarContainer } from "./styles";
+import { SidebarAboutLogo, Container } from "./styles";
 import { RoutesPath, RoutesPathProps } from "../../Routes";
 
 type SidebarItemProps = {
@@ -27,7 +27,7 @@ const Sidebar = () => {
     });
 
   return (
-    <SidebarContainer>
+    <Container>
       <SidebarAboutLogo
         src="https://cdn.jsdelivr.net/gh/wpdas/alem/docs/assets/near-script-logo.png"
         width={60}
@@ -61,7 +61,7 @@ const Sidebar = () => {
 
         {getLinksByCategory("BOS")}
       </div>
-    </SidebarContainer>
+    </Container>
   );
 };
 

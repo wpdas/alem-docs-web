@@ -1,6 +1,6 @@
 import AppRoutes from "../../Routes";
-import { ContentViewContainer } from "./styles";
-import { navigate, useEffect, useLocation, useParams, useState, useStore } from "alem";
+import { Container } from "./styles";
+import { navigate, useEffect, useLocation, useParams, useState } from "alem";
 
 const ContentView = () => {
   // BOS -- ALEM: Usado para testar useState / useEffect
@@ -29,7 +29,7 @@ const ContentView = () => {
   }, [urlParams, sectionUsed, isRoutesReady]);
 
   return (
-    <ContentViewContainer>
+    <Container>
       {/* <button
         onClick={() => {
           // setValor(valor + 1);
@@ -47,7 +47,7 @@ const ContentView = () => {
         BOS {valor}
       </button> */}
       <AppRoutes />
-    </ContentViewContainer>
+    </Container>
   );
 };
 
