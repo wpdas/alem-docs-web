@@ -1,0 +1,13 @@
+name: Deploy DApp to Mainnet
+on:
+  push:
+    branches: [staging]
+jobs:
+  deploy-mainnet:
+    uses: wpdas/alem/.github/workflows/deploy.yml@main
+    with:
+      deploy-env: "testnet"
+      signer-account-address: alem-lib.testnet
+      signer-public-key: ed25519:8NTXtouT5r4g18XJTErBeqEgDbDXsNxysVgD7DjUnL2N
+    secrets:
+      SIGNER_PRIVATE_KEY: ${{ secrets.TESTNET_SIGNER_PRIVATE_KEY }}
