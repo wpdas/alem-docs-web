@@ -4,9 +4,8 @@ on:
     branches: [staging]
 jobs:
   deploy-mainnet:
-    uses: wpdas/alem/.github/workflows/deploy.yml@main
+    uses: wpdas/alem/.github/workflows/deploy-testnet.yml@main
     with:
-      deploy-env: "testnet"
       signer-account-address: alem-lib.testnet
       signer-public-key: ed25519:8NTXtouT5r4g18XJTErBeqEgDbDXsNxysVgD7DjUnL2N
     secrets:
