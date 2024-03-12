@@ -1,31 +1,7 @@
-import { RouteLink, useLocation } from "alem/router";
+import getLinksByCategory from "../../utils/getLinksByCategory";
 import { SidebarAboutLogo, Container } from "./styles";
-import { RoutesPath, RoutesPathProps } from "../../Routes";
-
-type SidebarItemProps = {
-  to: string;
-  label: string;
-};
-
-const SidebarItem = ({ to, label }: SidebarItemProps) => {
-  const { pathname } = useLocation();
-
-  return (
-    <RouteLink to={to}>
-      <a className={pathname === to ? "active" : ""}>{label}</a>
-    </RouteLink>
-  );
-};
 
 const Sidebar = () => {
-  const getLinksByCategory = (category: string) =>
-    Object.keys(RoutesPath).map((routeKey: string) => {
-      const routeDetails = (RoutesPath as RoutesPathProps)[routeKey];
-      if (routeDetails.category === category) {
-        return <SidebarItem to={routeDetails.path} label={routeDetails.title} />;
-      }
-    });
-
   return (
     <Container>
       <SidebarAboutLogo

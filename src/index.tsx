@@ -1,11 +1,18 @@
-import { AppBackground, AppContainer, Banner } from "./styles";
+import { loadExternalStyles } from "alem";
+import {
+  AppBackground,
+  AppContainer,
+  Banner,
+  MobileNavBarSwitcher,
+  SideBarSwitcher,
+} from "./styles";
 import Sidebar from "./components/Sidebar";
 import ContentView from "./components/ContentView";
 import Loading from "./components/Loading";
 import Footer from "./components/Footer/Footer";
 import Modals from "./components/Modals/Modals";
 import useAlemStore from "./stores/useAlemStore";
-import { loadExternalStyles } from "alem";
+import MobileNavBar from "./components/MobileNavBar";
 
 const App = () => {
   const { currentVersion } = useAlemStore();
@@ -26,8 +33,13 @@ const App = () => {
       <Banner>
         Alem is currently on version <span>{currentVersion}</span>.
       </Banner>
+      <MobileNavBarSwitcher>
+        <MobileNavBar />
+      </MobileNavBarSwitcher>
       <AppContainer>
-        <Sidebar />
+        <SideBarSwitcher>
+          <Sidebar />
+        </SideBarSwitcher>
         <ContentView />
       </AppContainer>
       <Footer />
