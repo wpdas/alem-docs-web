@@ -19,7 +19,7 @@ const ContentView = () => {
 
   // Watch the section parameter.
   const urlParams = useParams();
-  const { isRoutesReady, routes } = useLocation();
+  const { isRoutesReady } = useLocation();
 
   useEffect(() => {
     if (urlParams.section && !sectionUsed && isRoutesReady) {

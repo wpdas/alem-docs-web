@@ -5,11 +5,13 @@
   "repository": "https://github.com/wpdas/alem-docs-web.git",
   "license": "MIT",
   "scripts": {
-    "start": "NODE_ENV=development alem dev",
-    "build": "alem build"
+    "start": "NODE_ENV=development alem dev --network testnet",
+    "build": "alem build",
+    "deploy:mainnet": "npm run build; alem deploy",
+    "deploy:testnet": "npm run build; alem deploy --network testnet"
   },
   "dependencies": {
-    "alem": "0.0.1-alpha.22"
+    "alem": "0.0.1-alpha.23"
   },
   "devDependencies": {
     "@types/styled-components": "^5.1.26",
