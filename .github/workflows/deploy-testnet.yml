@@ -1,4 +1,4 @@
-name: Deploy DApp to Mainnet
+name: Deploy DApp to Testnet
 on:
   push:
     branches: [staging]
