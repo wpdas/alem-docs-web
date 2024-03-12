@@ -36,9 +36,10 @@ export const AboutPage = () => {
       <AboutSectionGray>
         <AboutTitle>Create user interfaces from components</AboutTitle>
         <p>
-          Alem lets you build user interfaces out of individual pieces called components. Create
-          your own components like <Code>Thumbnail</Code>, <Code>LikeButton</Code>, and{" "}
-          <Code>Avatar</Code>. Then combine them into entire screens, pages, and other components.
+          Alem use its compiler to let you build user interfaces out of individual pieces called
+          components. Create your own components like <Code>Thumbnail</Code>,{" "}
+          <Code>LikeButton</Code>, and <Code>Avatar</Code>. Then combine them into entire screens,
+          pages, and other components.
         </p>
       </AboutSectionGray>
       <AboutSectionGray style={{ backgroundColor: "#fff" }}>

@@ -21,8 +21,6 @@ import {
   UseParamsPage,
 } from "./pages";
 import { AboutPage } from "./pages/About/About";
-import { createStore } from "alem";
-// import { buildMarkdownPages } from "./pages";
 
 export const Categories = {
   gettingStarted: "Getting Started",
