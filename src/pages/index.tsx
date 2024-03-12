@@ -12,9 +12,8 @@ export const InstallationPage = getMarkdownPage(
   `https://cdn.jsdelivr.net/gh/wpdas/alem@${currentVersion}/docs/installation.md`,
 );
 
-// TODO: Alterar para currentVersion na proxima atualizacao da lib
 export const ConfigFilePage = getMarkdownPage(
-  `https://cdn.jsdelivr.net/gh/wpdas/alem@main/docs/config-file.md`,
+  `https://cdn.jsdelivr.net/gh/wpdas/alem@${currentVersion}/docs/config-file.md`,
 );
 
 export const BOSPropsPage = getMarkdownPage(
