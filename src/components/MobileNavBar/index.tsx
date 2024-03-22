@@ -20,11 +20,11 @@ const MobileNavBar = () => {
   const [bosItems, setBosItems] = useState<(JSX.Element | undefined)[]>([]);
 
   useEffect(() => {
-    const _gettingStartedItems = getLinksByCategory("Getting Started");
-    const _routerItems = getLinksByCategory("Router");
-    const _contextItems = getLinksByCategory("Context");
-    const _apisItems = getLinksByCategory("APIs");
-    const _bosItems = getLinksByCategory("BOS");
+    const _gettingStartedItems = getLinksByCategory("Getting Started", closeMenu);
+    const _routerItems = getLinksByCategory("Router", closeMenu);
+    const _contextItems = getLinksByCategory("Context", closeMenu);
+    const _apisItems = getLinksByCategory("APIs", closeMenu);
+    const _bosItems = getLinksByCategory("BOS", closeMenu);
 
     setGettingStartedItems(_gettingStartedItems);
     setRouterItems(_routerItems);
