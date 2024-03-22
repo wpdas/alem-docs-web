@@ -1,5 +1,5 @@
-import TelegramIcon from "../../assets/svgs/telegram-icon";
-import { GithubIcon } from "../../assets/svgs/github-icon";
+import TelegramIcon from "../../assets/svgs/telegram-icon.module";
+import { GithubIcon } from "../../assets/svgs/github-icon.module";
 import { Container, Description, Item, Logo, Socials } from "./styles";
 import { Row } from "../UI";
 

@@ -66,7 +66,9 @@ export const Logo = styled.img`
 `;
 
 export const ItemsContainer = styled.button<{ collapsed: boolean }>`
-  display: ${(props) => (props.collapsed ? "flex" : "none")};
+  display: flex;
+  overflow: hidden;
+  height: ${(props) => (props.collapsed ? "fit-content" : "0px")};
   background-color: #fff;
   border: none;
   flex-direction: column;

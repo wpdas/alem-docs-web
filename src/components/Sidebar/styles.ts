@@ -54,4 +54,8 @@ export const Container = styled.div`
 
 export const SidebarAboutLogo = styled.img`
   align-self: center;
+
+  @media (max-width: 800px) {
+    display: none;
+  }
 `;
