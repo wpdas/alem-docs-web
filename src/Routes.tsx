@@ -1,186 +1,127 @@
-import { Routes, createRoute } from "alem/router";
-import {
-  BOSPropsPage,
-  CLIPage,
-  ClearStorePage,
-  ConfigFilePage,
-  CreateRoutePage,
-  CreatingStorePage,
-  DeployingWithGithubActionsPage,
-  // RoadmapPage,
-  FeatureOverviewPage,
-  GetStorePage,
-  InstallationPage,
-  LoadExternalStylesPage,
-  NavigatePage,
-  PromisifyPage,
-  IsDevelopmentPage,
-  RouteLinkPage,
-  RoutesPage,
-  UseLocationPage,
-  UseParamsPage,
-} from "./pages";
+import { Router, createRoute, useParams } from "alem";
 import { AboutPage } from "./pages/About/About";
+import { RoutesPath } from "./routeProps";
+import MarkdownPage from "./pages/MarkdownPage/MarkdownPage";
 
-export const Categories = {
-  gettingStarted: "Getting Started",
-  router: "Router",
-  apis: "APIs",
-  store: "Store",
-  bos: "BOS",
+type Props = {
+  libVersion: string;
 };
 
-export type RoutesPathProps = Record<string, { path: string; title: string; category: string }>;
+const Routes = ({ libVersion }: Props) => {
+  const AboutPageRoute = createRoute(RoutesPath.about.path, AboutPage);
 
-export const RoutesPath = {
-  // About
-  about: {
-    path: "about",
-    title: "About",
-    category: Categories.gettingStarted,
-  },
-  // Getting Started
-  featureOverview: {
-    path: "feature-overview",
-    title: "Feature Overview",
-    category: Categories.gettingStarted,
-  },
-  installation: {
-    path: "installation",
-    title: "Installation",
-    category: Categories.gettingStarted,
-  },
-  configFile: {
-    path: "config-file",
-    title: "Config File",
-    category: Categories.gettingStarted,
-  },
-  cli: {
-    path: "cli",
-    title: "CLI",
-    category: Categories.gettingStarted,
-  },
-  deployingWithGithubActions: {
-    path: "deploying-with-github-actions",
-    title: "Deploying with GitHub Actions",
-    category: Categories.gettingStarted,
-  },
-  // roadmap: {
-  //   path: "roadmap",
-  //   title: "Roadmap",
-  //   category: Categories.gettingStarted,
-  // },
-
-  // Router
-  routes: {
-    path: "routes",
-    title: "Routes",
-    category: Categories.router,
-  },
-  createRoute: {
-    path: "create-route",
-    title: "Create Route",
-    category: Categories.router,
-  },
-  routeLink: {
-    path: "route-link",
-    title: "Route Link",
-    category: Categories.router,
-  },
-  navigate: {
-    path: "navigate",
-    title: "Navigate",
-    category: Categories.router,
-  },
-  useLocation: {
-    path: "use-location",
-    title: "Use Location",
-    category: Categories.router,
-  },
-  useParams: {
-    path: "use-params",
-    title: "Use Params",
-    category: Categories.router,
-  },
-
-  // APIs
-  loadExternalStyles: {
-    path: "load-external-styles",
-    title: "Load External Styles",
-    category: Categories.apis,
-  },
-  promisify: {
-    path: "promisify",
-    title: "Promisify",
-    category: Categories.apis,
-  },
-  isDevelopment: {
-    path: "is-development",
-    title: "Is Development",
-    category: Categories.apis,
-  },
-
-  // Store
-  creatingStore: {
-    path: "creating-a-store",
-    title: "Creating Store",
-    category: Categories.store,
-  },
-  getStore: {
-    path: "get-store",
-    title: "Get Store",
-    category: Categories.store,
-  },
-  clearStore: {
-    path: "clear-store",
-    title: "Clear Store",
-    category: Categories.store,
-  },
-
-  // BOS API
-  bosProps: {
-    path: "bos-props",
-    title: "APIs and Components",
-    category: Categories.bos,
-  },
-};
-
-const AppRoutes = () => {
   const routes = [
-    // About
-    createRoute(RoutesPath.about.path, AboutPage),
+    AboutPageRoute,
 
-    // Getting Started
-    createRoute(RoutesPath.featureOverview.path, FeatureOverviewPage),
-    createRoute(RoutesPath.installation.path, InstallationPage),
-    createRoute(RoutesPath.configFile.path, ConfigFilePage),
-    createRoute(RoutesPath.cli.path, CLIPage),
-    createRoute(RoutesPath.deployingWithGithubActions.path, DeployingWithGithubActionsPage),
-    // createRoute(RoutesPath.roadmap.path, RoadmapPage),
+    {
+      path: RoutesPath.featureOverview.path,
+      component: () => (
+        <MarkdownPage
+          mdFileURL={`https://cdn.jsdelivr.net/gh/wpdas/alem/docs/feature-overview.md`}
+        />
+      ),
+    },
+
+    createRoute(RoutesPath.installation.path, () => (
+      <MarkdownPage mdFileURL={`https://cdn.jsdelivr.net/gh/wpdas/alem/docs/installation.md`} />
+    )),
+
+    createRoute(RoutesPath.configFile.path, () => (
+      <MarkdownPage mdFileURL={`https://cdn.jsdelivr.net/gh/wpdas/alem/docs/config-file.md`} />
+    )),
+    createRoute(RoutesPath.cli.path, () => (
+      <MarkdownPage mdFileURL={`https://cdn.jsdelivr.net/gh/wpdas/alem/docs/cli.md`} />
+    )),
+    createRoute(RoutesPath.deployingWithGithubActions.path, () => (
+      <MarkdownPage
+        mdFileURL={`https://cdn.jsdelivr.net/gh/wpdas/alem/docs/deploying-with-github-actions.md`}
+      />
+    )),
 
     // Router
-    createRoute(RoutesPath.routes.path, RoutesPage),
-    createRoute(RoutesPath.createRoute.path, CreateRoutePage),
-    createRoute(RoutesPath.routeLink.path, RouteLinkPage),
-    createRoute(RoutesPath.navigate.path, NavigatePage),
-    createRoute(RoutesPath.useLocation.path, UseLocationPage),
-    createRoute(RoutesPath.useParams.path, UseParamsPage),
+    createRoute(RoutesPath.routes.path, () => (
+      <MarkdownPage mdFileURL={`https://cdn.jsdelivr.net/gh/wpdas/alem/docs/router/routes.md`} />
+    )),
+    createRoute(RoutesPath.createRoute.path, () => (
+      <MarkdownPage
+        mdFileURL={`https://cdn.jsdelivr.net/gh/wpdas/alem/docs/router/create-route.md`}
+      />
+    )),
+    createRoute(RoutesPath.routeLink.path, () => (
+      <MarkdownPage
+        mdFileURL={`https://cdn.jsdelivr.net/gh/wpdas/alem/docs/router/route-link.md`}
+      />
+    )),
+    createRoute(RoutesPath.navigate.path, () => (
+      <MarkdownPage mdFileURL={`https://cdn.jsdelivr.net/gh/wpdas/alem/docs/router/navigate.md`} />
+    )),
+    createRoute(RoutesPath.routerProvider.path, () => (
+      <MarkdownPage
+        mdFileURL={`https://cdn.jsdelivr.net/gh/wpdas/alem/docs/router/router-provider.md`}
+      />
+    )),
+    createRoute(RoutesPath.useLocation.path, () => (
+      <MarkdownPage
+        mdFileURL={`https://cdn.jsdelivr.net/gh/wpdas/alem/docs/router/use-location.md`}
+      />
+    )),
+    createRoute(RoutesPath.useParams.path, () => (
+      <MarkdownPage
+        mdFileURL={`https://cdn.jsdelivr.net/gh/wpdas/alem/docs/router/use-params.md`}
+      />
+    )),
+    createRoute(RoutesPath.useRoutes.path, () => (
+      <MarkdownPage
+        mdFileURL={`https://cdn.jsdelivr.net/gh/wpdas/alem/docs/router/use-routes.md`}
+      />
+    )),
+
+    // Context
+    createRoute(RoutesPath.createContext.path, () => (
+      <MarkdownPage
+        mdFileURL={`https://cdn.jsdelivr.net/gh/wpdas/alem/docs/context/create-context.md`}
+      />
+    )),
+    createRoute(RoutesPath.useContext.path, () => (
+      <MarkdownPage
+        mdFileURL={`https://cdn.jsdelivr.net/gh/wpdas/alem/docs/context/use-context.md`}
+      />
+    )),
 
     // APIs
-    createRoute(RoutesPath.loadExternalStyles.path, LoadExternalStylesPage),
-    createRoute(RoutesPath.promisify.path, PromisifyPage),
-    createRoute(RoutesPath.isDevelopment.path, IsDevelopmentPage),
-
-    // Store
-    createRoute(RoutesPath.creatingStore.path, CreatingStorePage),
-    createRoute(RoutesPath.getStore.path, GetStorePage),
-    createRoute(RoutesPath.clearStore.path, ClearStorePage),
+    createRoute(RoutesPath.loadExternalStyles.path, () => (
+      <MarkdownPage
+        mdFileURL={`https://cdn.jsdelivr.net/gh/wpdas/alem/docs/api/load-external-styles.md`}
+      />
+    )),
+    createRoute(RoutesPath.promisify.path, () => (
+      <MarkdownPage mdFileURL={`https://cdn.jsdelivr.net/gh/wpdas/alem/docs/api/promisify.md`} />
+    )),
+    createRoute(RoutesPath.isDevelopment.path, () => (
+      <MarkdownPage
+        mdFileURL={`https://cdn.jsdelivr.net/gh/wpdas/alem/docs/api/is-development.md`}
+      />
+    )),
 
     // BOS API
-    createRoute(RoutesPath.bosProps.path, BOSPropsPage),
+    createRoute(RoutesPath.bosProps.path, () => (
+      <MarkdownPage mdFileURL={`https://cdn.jsdelivr.net/gh/wpdas/alem/docs/bos-overview.md`} />
+    )),
   ];
 
-  return <Routes routes={routes} type="ContentBased" />;
+  const urlParams = useParams();
+
+  return (
+    <>
+      {/* <Router routes={routes} parameterName="tab" /> */}
+      <Router
+        routes={routes}
+        type="ContentBased"
+        parameterName="tab"
+        initialRoute={urlParams.section}
+      />
+    </>
+  );
 };
 
-export default AppRoutes;
+export default Routes;

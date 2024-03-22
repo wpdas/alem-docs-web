@@ -42,15 +42,22 @@ export const Banner = styled.p`
 `;
 
 export const MobileNavBarSwitcher = styled.div`
-  display: none;
+  font-family: "Wix Madefor Display", sans-serif;
+
+  /* display: none; */
+  height: 0px;
+  overflow: hidden;
   @media (max-width: 800px) {
     display: flex;
+    height: fit-content;
   }
 `;
 
 export const SideBarSwitcher = styled.div`
   display: flex;
   @media (max-width: 800px) {
-    display: none;
+    /* display: none; */
+    height: 0px;
+    overflow: hidden;
   }
 `;

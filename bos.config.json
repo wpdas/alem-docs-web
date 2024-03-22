@@ -18,9 +18,5 @@
     "near",
     "bos",
     "react"
-  ],
-  "options": {
-    "showFallbackSpinner": false,
-    "maintainRouteWhenDeveloping": true
-  }
+  ]
 }

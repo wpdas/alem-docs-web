@@ -25,17 +25,20 @@ export const Description = styled.h3`
   margin-bottom: 34px;
 `;
 
-export const CustomButton = styled.button`
-  padding: 0.75rem 1.5rem;
-  border-radius: 30px;
-  border: 1px solid #ccc;
-  background-color: #fff;
-  color: rgb(35 39 47);
-  font-weight: 700;
-  font-size: 17px;
+export const CustomAnchor = styled.div`
+  display: flex;
+  a {
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: rgb(35 39 47);
+    font-weight: 700;
+    font-size: 17px;
 
-  :hover {
-    background-color: #fafafa;
+    :hover {
+      background-color: #fafafa;
+    }
   }
 `;
 
@@ -79,6 +82,22 @@ export const Section = styled.div`
 
 export const Code = styled.span`
   background-color: rgba(208, 211, 220, 0.4);
+  border-radius: 0.5rem;
+  border: 0 solid #e5e7eb;
+  color: rgb(67 74 90);
+  padding: 0.125rem 0.25rem;
+`;
+
+export const BlueCode = styled.span`
+  background-color: rgba(164, 187, 232, 0.4);
+  border-radius: 0.5rem;
+  border: 0 solid #e5e7eb;
+  color: rgb(67 74 90);
+  padding: 0.125rem 0.25rem;
+`;
+
+export const RedCode = styled.span`
+  background-color: rgba(223, 139, 142, 0.3);
   border-radius: 0.5rem;
   border: 0 solid #e5e7eb;
   color: rgb(67 74 90);
