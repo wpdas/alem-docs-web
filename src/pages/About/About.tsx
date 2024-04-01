@@ -24,7 +24,7 @@ export const AboutPage = () => {
           alt="logo"
         />
         <Title>Além</Title>
-        <Description>The library for web3 NEAR BOS interfaces</Description>
+        <Description>The library to build web3 applications for Near BOS</Description>
         <Row>
           <CustomLink href="https://github.com/wpdas/alem-docs-web" target="_blank">
             <p>See an Example</p>
@@ -46,11 +46,10 @@ export const AboutPage = () => {
       <Section style={{ backgroundColor: "#fff" }}>
         <Title>Stateless & Stateful Component</Title>
         <p>
-          Both types of components work perfectly with Além. Prefer using stateless components for
-          faster rendering. Stateless components <BlueCode>can receive children</BlueCode>. Stateful
-          components <RedCode>cannot natively support children</RedCode> due to a limitation in Near
-          VM. Although it is possible to also send children to stateful components using Além, but
-          it is not recommended as the children's properties may be lost.
+          Leverage the full power of JSX to create your components easily, quickly, and efficiently.
+          Both stateful and stateless components <BlueCode>support children</BlueCode>, which is not
+          natively supported by the Near VM, but Além handles this in a way that it is processed and
+          understood.
         </p>
       </Section>
       <Section>
@@ -61,12 +60,41 @@ export const AboutPage = () => {
         </p>
       </Section>
       <Section style={{ backgroundColor: "#fff" }}>
-        <Title>Good Practices</Title>
-        <p>
-          All project content will be organized in just one file. Be aware of this when developing
-          your application. Whenever possible, use functions that return the desired content to
-          avoid possible issues in the application.
-        </p>
+        <Title>Good to Know</Title>
+        <ul>
+          <li>
+            Stateful components are interpreted as Widgets by Além, while Stateless components are
+            seen as auxiliary resources injected into the Widgets that import them.
+          </li>
+          <li>
+            A <BlueCode>.tsx/.jsx</BlueCode> file can have only one component. You can create other
+            internal components within the component's function.
+          </li>
+          <li>
+            Prefer creating one file per resource, as importing a resource from a{" "}
+            <BlueCode>.ts/.js</BlueCode> file will inject the entire content of that file into the
+            Widget.
+          </li>
+          <li>
+            The use of the <RedCode>import * foo from './foo'</RedCode> signature is not supported.
+            This is intentional, as the idea is to import only the necessary fragments into the
+            Widget.
+          </li>
+          <li>
+            The use of <BlueCode>async/await</BlueCode> is supported and
+            <BlueCode>experimental</BlueCode>. It should be used only in the main scope of the
+            component. It will make changes to the state of the main Widget. Do not use in hooks.
+          </li>
+          <li>
+            Avoid importing a resource that has the same name as any variable within your component.
+            Além handles exports that use the same names but does not handle variables of the same
+            name at runtime.
+          </li>
+          <li>
+            Use correct comment structure for css/styled-components and jsx/js/tsx/ts files. Using
+            the wrong nomenclature for comments can affect the final result of the compiled project.
+          </li>
+        </ul>
       </Section>
     </div>
   );

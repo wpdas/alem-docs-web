@@ -48,11 +48,6 @@ export const RoutesPath = {
     title: "Routes",
     category: Categories.router,
   },
-  createRoute: {
-    path: "create-route",
-    title: "Create Route",
-    category: Categories.router,
-  },
   routeLink: {
     path: "route-link",
     title: "Route Link",
@@ -63,14 +58,9 @@ export const RoutesPath = {
     title: "Navigate",
     category: Categories.router,
   },
-  routerProvider: {
-    path: "router-provider",
-    title: "Router Provider",
-    category: Categories.router,
-  },
-  useLocation: {
-    path: "use-location",
-    title: "Use Location",
+  getLocation: {
+    path: "get-location",
+    title: "Get Location",
     category: Categories.router,
   },
   useParams: {
@@ -85,18 +75,13 @@ export const RoutesPath = {
   },
 
   // Context
-  createContext: {
-    path: "create-context",
-    title: "Create Context",
-    category: Categories.context,
-  },
-  useContext: {
-    path: "use-context",
-    title: "Use Context",
+  createAndUseContext: {
+    path: "create-and-use-context",
+    title: "Create & Use Context",
     category: Categories.context,
   },
 
-  // APIs
+  // APIs - Utils
   loadExternalStyles: {
     path: "load-external-styles",
     title: "Load External Styles",
@@ -110,6 +95,11 @@ export const RoutesPath = {
   isDevelopment: {
     path: "is-development",
     title: "Is Development",
+    category: Categories.apis,
+  },
+  createDebounce: {
+    path: "create-debounce",
+    title: "Create Debounce",
     category: Categories.apis,
   },
 

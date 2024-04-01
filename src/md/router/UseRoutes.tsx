@@ -1,7 +1,7 @@
 import { Markdown } from 'alem';
 
 const UseRoutes = () => {
-   const mdContent = Buffer.from(`IyMgVXNlIFJvdXRlcwo=`, "base64").toString("utf-8");
+   const mdContent = Buffer.from(`IyMgVXNlIFJvdXRlcwoKSG9vayB1c2FkbyBwYXJhIHJldG9ybmFyIG9zIGRhZG9zIGF0dWFpcyB1c2Fkb3MgcGVsbyBjb21wb25lbnRlIGBSb3V0ZXJgLgoKYGBgdHMKaW1wb3J0IHsgdXNlUm91dGVzIH0gZnJvbSAiYWxlbSI7CgpleHBvcnQgY29uc3QgU29tZUNvbXBvbmVudCA9ICgpID0+IHsKICBjb25zdCByb3V0ZXNQcm9wcyA9IHVzZVJvdXRlcygpOwogIGNvbnNvbGUubG9nKHJvdXRlc1Byb3BzKTsKICAvLyB7IHJvdXRlc0luaXRpYWxpemVkOiB0cnVlLCBhY3RpdmVSb3V0ZTogJ2hvbWUnLCByb3V0ZVBhcmFtZXRlck5hbWU6ICdwYXRoJywgcm91dGVzOiBbJ2hvbWUnLCAncHJvZmlsZSddLCByb3V0ZVR5cGU6ICdDb250ZW50QmFzZWQnIH0KCiAgcmV0dXJuICIiOwp9OwpgYGAK`, "base64").toString("utf-8");
    return <Markdown text={mdContent} />
 }
 

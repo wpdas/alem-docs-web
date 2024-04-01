@@ -19,6 +19,8 @@ import LoadExternalStyles from "./md/api/LoadExternalStyles";
 import Promisify from "./md/api/Promisify";
 import IsDevelopment from "./md/api/IsDevelopment";
 import BosOverview from "./md/BosOverview";
+import RoutesDocs from "./md/router/RoutesDocs";
+import CreateDebounce from "./md/api/CreateDebounce";
 
 const Routes = () => {
   const AboutPageRoute = createRoute(RoutesPath.about.path, AboutPage);
@@ -35,23 +37,21 @@ const Routes = () => {
     createRoute(RoutesPath.deployingWithGithubActions.path, DeployingWithGithubActions),
 
     // Router
-    createRoute(RoutesPath.routes.path, UseRoutes),
-    createRoute(RoutesPath.createRoute.path, CreateRoute),
+    createRoute(RoutesPath.routes.path, RoutesDocs),
+    createRoute(RoutesPath.useRoutes.path, UseRoutes),
     createRoute(RoutesPath.routeLink.path, RouteLinkDocs),
     createRoute(RoutesPath.navigate.path, Navigate),
-    createRoute(RoutesPath.routerProvider.path, RouterProviderDocs),
-    createRoute(RoutesPath.useLocation.path, GetLocation),
+    createRoute(RoutesPath.getLocation.path, GetLocation),
     createRoute(RoutesPath.useParams.path, UseParams),
-    createRoute(RoutesPath.useRoutes.path, () => <p>Use Routes</p>),
 
     // Context
-    createRoute(RoutesPath.createContext.path, CreateContext),
-    createRoute(RoutesPath.useContext.path, UseContext),
+    createRoute(RoutesPath.createAndUseContext.path, CreateContext),
 
     // APIs
     createRoute(RoutesPath.loadExternalStyles.path, LoadExternalStyles),
     createRoute(RoutesPath.promisify.path, Promisify),
     createRoute(RoutesPath.isDevelopment.path, IsDevelopment),
+    createRoute(RoutesPath.createDebounce.path, CreateDebounce),
 
     // BOS API
     createRoute(RoutesPath.bosProps.path, BosOverview),

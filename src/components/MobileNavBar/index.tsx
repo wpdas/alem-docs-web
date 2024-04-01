@@ -65,7 +65,7 @@ const MobileNavBar = () => {
         </div>
 
         <div>
-          <h3>Router</h3>
+          <h3>Routes</h3>
           {routerItems}
         </div>
 
@@ -75,7 +75,7 @@ const MobileNavBar = () => {
         </div>
 
         <div>
-          <h3>APIs</h3>
+          <h3>Utils</h3>
           {apisItems}
         </div>
 
