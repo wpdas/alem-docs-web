@@ -29,6 +29,8 @@ import {
   useCache,
   useEffect,
   useState,
+  useMemo,
+  Big,
 } from "alem";
 
 export const ComponentC = () => {

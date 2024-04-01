@@ -70,7 +70,12 @@ export const Section = styled.div`
   align-items: center;
   text-align: center;
 
-  p {
+  ul {
+    list-style-type: none;
+  }
+
+  p,
+  li {
     font-size: 20px;
     color: rgb(67 74 90);
     line-height: 1.5;
