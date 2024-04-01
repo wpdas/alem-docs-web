@@ -1,0 +1,8 @@
+import { Markdown } from 'alem';
+
+const Promisify = () => {
+   const mdContent = Buffer.from(`IyBQcm9taXNpZnkKClByb21pc2lmeSBpcyB1c2VkIHRvIGNoZWNrIGlmIGEgcGllY2Ugb2YgZGF0YSBpcyBwcmVzZW50IHVudGlsIGEgc3BlY2lmaWMgY2hlY2sgdGltZSBpcyByZWFjaGVkLiBCYXNpY2FsbHkgaXQgY2FsbCByZXNvbHZlIG9yIHJlamVjdCBmb3IgYSBnaXZlbiBjYWxsZXIuCgpgYGB0cwppbXBvcnQgeyBwcm9taXNpZnkgfSBmcm9tICJhbGVtIjsKCmNvbnN0IGdldFN0b3JhZ2UgPSAoKSA9PiBTdG9yYWdlLmdldCgibXkta2V5Iik7CmNvbnN0IHJlc29sdmUgPSAoc3RvcmFnZURhdGEpID0+IGNvbnNvbGUubG9nKHN0b3JhZ2VEYXRhKTsKY29uc3QgcmVqZWN0ID0gKCkgPT4gY29uc29sZS5sb2coIkVycm9yIik7CmNvbnN0IHRpbWVvdXQgPSA1MDAwOyAvLyA1c2VjCgpwcm9taXNpZnkoZ2V0U3RvcmFnZSwgcmVzb2x2ZSwgcmVqZWN0LCB0aW1lb3V0KTsKYGBgCg==`, "base64").toString("utf-8");
+   return <Markdown text={mdContent} />
+}
+
+export default Promisify;
