@@ -1,4 +1,4 @@
-import { useEffect, getLocation, useState, useRoutes } from "alem";
+import { useEffect, getLocation, useState, useRoutes, props } from "alem";
 import { SidebarAboutLogo, Container } from "./styles";
 import getLinksByCategory from "../../utils/getLinksByCategory";
 

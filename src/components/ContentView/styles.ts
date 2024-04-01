@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
-  background: #fff;
+  /* background: #fff; */
   /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
   /* border-radius: 8px; */
   min-width: 240px;
@@ -38,7 +38,7 @@ export const Container = styled.div`
     color: #292929;
   }
 
-  // Code Viewer
+  /* Code Viewer */
   pre {
     div {
       background-color: #fafafa !important;
@@ -102,3 +102,34 @@ export const Title = styled.h3`
   font-size: 26px;
   color: #292929;
 `;
+
+export const ShareButton = styled.button`
+  padding: 0.5rem 1.4rem;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #292929;
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+
+  :hover {
+    background-color: rgb(252 252 252);
+  }
+
+  span {
+    margin-right: 18px;
+    width: 18px;
+  }
+`;
+
+export const TopSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  align-self: flex-end;
+`;
+
+export const Margin = styled.div``;
