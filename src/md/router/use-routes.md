@@ -1,6 +1,6 @@
 ## Use Routes
 
-Hook usado para retornar os dados atuais usados pelo componente `Router`.
+Hook used to return the current data utilized by the `Router` component.
 
 ```ts
 import { useRoutes } from "alem";
