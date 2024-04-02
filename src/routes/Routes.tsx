@@ -1,6 +1,8 @@
-import { Router, createRoute, useParams } from "alem";
-import { AboutPage } from "./pages/About/About";
+import { Router, createRoute, getLocation, useParams } from "alem";
+import { AboutPage } from "../pages/About/About";
 import { RoutesPath } from "./routeProps";
+import nextPrevRoutes from "./nextPrevRoutes";
+import getRouteTitleByPath from "./getRouteTitleByPath";
 import FeatureOverview from "@md/FeatureOverview";
 import Installation from "@md/Installation";
 import ConfigFile from "@md/ConfigFile";
@@ -18,12 +20,19 @@ import IsDevelopment from "@md/api/IsDevelopment";
 import BosOverview from "@md/BosOverview";
 import CreateDebounce from "@md/api/CreateDebounce";
 import RoutesDocs from "@md/router/RoutesDocs";
+import { FooterNavContainer, NextPrevButton } from "./styles";
 
 const Routes = () => {
-  const AboutPageRoute = createRoute(RoutesPath.about.path, AboutPage);
+  const urlParams = useParams();
+  const location = getLocation();
+  const nextPrev = nextPrevRoutes();
+  const next = nextPrev[location.pathname].next;
+  const prev = nextPrev[location.pathname].prev;
+  const nextTitle = getRouteTitleByPath(next);
+  const prevTitle = getRouteTitleByPath(prev);
 
   const routes = [
-    AboutPageRoute,
+    createRoute(RoutesPath.about.path, AboutPage),
     {
       path: RoutesPath.featureOverview.path,
       component: FeatureOverview,
@@ -54,9 +63,26 @@ const Routes = () => {
     createRoute(RoutesPath.bosProps.path, BosOverview),
   ];
 
-  const urlParams = useParams();
+  return (
+    <>
+      <Router routes={routes} initialRoute={urlParams.section} />
+      <FooterNavContainer hasPrevious={!!prev} hasNext={!!next}>
+        {prev && (
+          <NextPrevButton href={`?path=${prev}`}>
+            <p>Previous</p>
+            <span>{prevTitle}</span>
+          </NextPrevButton>
+        )}
 
-  return <Router routes={routes} initialRoute={urlParams.section} />;
+        {next && (
+          <NextPrevButton next href={`?path=${next}`}>
+            <p>Next</p>
+            <span>{nextTitle}</span>
+          </NextPrevButton>
+        )}
+      </FooterNavContainer>
+    </>
+  );
 };
 
 export default Routes;

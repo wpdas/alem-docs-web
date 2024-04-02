@@ -29,6 +29,8 @@ export const Container = styled.div`
 
   h1 {
     font-size: 28px;
+    border-bottom: rgb(224 226 229) solid 1px;
+    padding-bottom: 12px;
   }
 
   h4 {

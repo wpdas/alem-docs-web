@@ -1,4 +1,4 @@
-## Create Context
+# Create Context
 
 Similar to React's Context API, Além also provides a way to create contexts. Contexts are very helpful when you want to create a specific data structure and pass it to child components.
 
@@ -30,6 +30,8 @@ const UserProvider = () => {
   });
 };
 ```
+
+# Use Context
 
 Using context with `useContext`:
 

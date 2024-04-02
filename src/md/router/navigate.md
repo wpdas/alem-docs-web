@@ -1,4 +1,4 @@
-## Navigate
+# Navigate
 
 This feature makes it possible to programmatically navigate to available routes. The URL will not be affected!
 

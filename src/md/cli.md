@@ -1,4 +1,4 @@
-## Além CLI
+# Além CLI
 
 Além has its own command system.
 

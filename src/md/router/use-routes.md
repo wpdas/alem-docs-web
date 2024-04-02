@@ -1,4 +1,4 @@
-## Use Routes
+# Use Routes
 
 Hook used to return the current data utilized by the `Router` component.
 

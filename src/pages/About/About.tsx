@@ -12,12 +12,12 @@ import {
   RedCode,
 } from "./styles";
 import { Row } from "../../components/UI";
-import { RoutesPath } from "../../routeProps";
+import { RoutesPath } from "../../routes/routeProps";
 
 export const AboutPage = () => {
   return (
     <div>
-      <Container>
+      <Container style={{ marginBottom: 0 }}>
         <Logo
           src="https://cdn.jsdelivr.net/gh/wpdas/alem/docs/assets/near-script-logo.png"
           width={120}
@@ -35,11 +35,10 @@ export const AboutPage = () => {
           </CustomAnchor>
         </Row>
       </Container>
-      <Section style={{ backgroundColor: "#fff" }}>
+      <Section style={{ backgroundColor: "#fff", paddingTop: 40 }}>
         <img
-          // src="https://cdn.jsdelivr.net/gh/wpdas/alem-docs-web/src/md/assets/diagram.jpg"
-          src="https://cdn.jsdelivr.net/gh/wpdas/alem/docs/assets/near-script-logo.png"
-          height="380"
+          src="https://cdn.jsdelivr.net/gh/wpdas/alem-docs-web/src/md/assets/diagram.jpg"
+          width="100%"
           alt="Diagram"
         />
 

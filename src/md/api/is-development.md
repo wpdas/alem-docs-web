@@ -1,4 +1,4 @@
-## isDevelopment
+# isDevelopment
 
 Useful feature to know if the environment is development or production.
 

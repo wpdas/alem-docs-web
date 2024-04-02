@@ -5,6 +5,10 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   margin-bottom: 90px;
+
+  h1 {
+    border-bottom: none;
+  }
 `;
 
 export const Logo = styled.img`
@@ -69,6 +73,11 @@ export const Section = styled.div`
   padding: 90px 20px;
   align-items: center;
   text-align: center;
+
+  h1 {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
 
   ul {
     list-style-type: none;

@@ -1,5 +1,5 @@
 import { clipboard, getLocation, isDevelopment } from "alem";
-import Routes from "../../Routes";
+import Routes from "../../routes/Routes";
 import { Container, Margin, ShareButton, TopSection } from "./styles";
 import ShareIcon from "../../assets/svgs/share-icon";
 
