@@ -2,6 +2,10 @@
 
 Alem is a web3 **JavaScript** / **TypeScript** library to create web3 apps for Near BOS. You can create your applications in a similar way to React. All components and other resources will be transformed into a file understandable by Near VM.
 
+Alem makes it painless to create interactive UIs. Design simple views for each state in your application. Declarative views make your code more predictable, simpler to understand, and easier to debug.
+
+Build encapsulated components that manage their own state, then compose them to make complex UIs. Since component logic is written in JavaScript, you can easily pass rich data through your app.
+
 **Tip:** Use function as much as possible. Even if it is an object to be shared, use a function to return the object. E.g.:
 
 ```ts

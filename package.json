@@ -13,7 +13,7 @@
     "deploy:testnet": "npm run build; alem deploy --network testnet"
   },
   "dependencies": {
-    "alem": "1.0.0-beta.3"
+    "alem": "1.0.0-beta.4"
   },
   "devDependencies": {
     "@types/styled-components": "^5.1.26",
