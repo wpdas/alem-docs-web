@@ -35,7 +35,7 @@ on:
     branches: [staging] # branch for trigger
 
 jobs:
-  deploy-mainnet:
+  deploy-testnet:
     uses: wpdas/alem/.github/workflows/deploy-testnet.yml@main
     with:
       signer-account-address: <SIGNER_ACCOUNT_ID> # account to sign with (should match bos.config.json > account)

@@ -56,14 +56,7 @@ const Routes = () => {
 
   const urlParams = useParams();
 
-  return (
-    <Router
-      routes={routes}
-      type="ContentBased"
-      parameterName="tab"
-      initialRoute={urlParams.section}
-    />
-  );
+  return <Router routes={routes} initialRoute={urlParams.section} />;
 };
 
 export default Routes;

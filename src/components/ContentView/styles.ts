@@ -27,6 +27,10 @@ export const Container = styled.div`
     color: rgb(35, 39, 47);
   }
 
+  h1 {
+    font-size: 28px;
+  }
+
   h4 {
     font-size: 16px;
   }
