@@ -28,3 +28,47 @@ Create a `bos.config.json` file at the root of the project with the following co
   "tags": ["the", "project", "tags", "here"]
 }
 ```
+
+## Path Aliases
+
+You can optionally configure your application's path aliases so that it works together with tsconfig.json, for example. Assuming your project's `tsconfig.json` file has the following configuration for paths:
+
+```json
+{
+  "compilerOptions": {
+    // ...
+    "baseUrl": ".",
+    "paths": {
+      "@app/*": ["src/*"],
+      "@components/*": ["src/components/*"]
+    }
+  }
+}
+```
+
+You will want to configure the same behavior using the `bos.config.json` file as follows:
+
+```json
+{
+  // ...
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@app/": "src/",
+      "@components/": "src/components/"
+    }
+  }
+}
+```
+
+Now in all of your source files, you can import components like this:
+
+```tsx
+// Without path aliases
+import Hero from "../../../components/Hero";
+import Footer from "../../../components/Footer";
+
+// With path aliases
+import Hero from "@components/Hero";
+import Footer from "@components/Footer";
+```

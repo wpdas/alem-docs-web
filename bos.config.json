@@ -18,5 +18,13 @@
     "near",
     "bos",
     "react"
-  ]
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@app/": "src/",
+      "@components/": "src/components/",
+      "@md/": "src/md/"
+    }
+  }
 }

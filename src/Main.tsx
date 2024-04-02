@@ -10,7 +10,7 @@ import {
 import MobileNavBar from "./components/MobileNavBar";
 import Sidebar from "./components/Sidebar";
 import ContentView from "./components/ContentView";
-import Footer from "./components/Footer/Footer";
+import Footer from "@app/components/Footer/Footer";
 
 const Main = () => {
   const [libVersion, setLibVersion] = useState("");

@@ -1,5 +1,5 @@
 import { loadExternalStyles } from "alem";
-import Loading from "./components/Loading";
+import Loading from "@components/Loading";
 import Main from "./Main";
 
 const App = () => {
