@@ -3,7 +3,7 @@ on:
   push:
     branches: [staging]
 jobs:
-  deploy-mainnet:
+  deploy-testnet:
     uses: wpdas/alem/.github/workflows/deploy-testnet.yml@main
     with:
       signer-account-address: alem-lib.testnet
