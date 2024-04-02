@@ -1,8 +1,8 @@
-## Routes
+# Routes
 
 There are two types of route managers provided by Além: `Router` and `SimpleRouter`.
 
-## Router
+# Router
 
 This component is responsible for managing the content to be displayed on the screen according to the active route. You can use the `createRoute` resource to create application routes and pass them to the Router.
 
@@ -39,7 +39,7 @@ const AppRoutes = () => {
 export default AppRoutes;
 ```
 
-## Types of Behavior
+**Types of Behavior**
 
 `Router` can handle links in two ways:
 
@@ -62,7 +62,7 @@ You can pass the type of behavior using the `type` property of Routes.
 />
 ```
 
-## SimpleRouter
+# SimpleRouter
 
 This router uses the URL to determine which content to display on the screen. It works similarly to the `URLBased` approach of the `Router`.
 

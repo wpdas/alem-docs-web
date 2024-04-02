@@ -1,4 +1,4 @@
-## Config File
+# Config File
 
 Create a `bos.config.json` file at the root of the project with the following content:
 
@@ -29,7 +29,7 @@ Create a `bos.config.json` file at the root of the project with the following co
 }
 ```
 
-## Path Aliases
+# Path Aliases
 
 You can optionally configure your application's path aliases so that it works together with tsconfig.json, for example. Assuming your project's `tsconfig.json` file has the following configuration for paths:
 

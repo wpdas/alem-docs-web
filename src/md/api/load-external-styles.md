@@ -1,4 +1,4 @@
-## Load External Styles - Fonts & CSS
+# Load External Styles - Fonts & CSS
 
 Use this feature to load external fonts and css files into your application. (Alem supports local .css files too, so you can just create them from the project's root folder.)
 

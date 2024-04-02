@@ -1,4 +1,4 @@
-## Get Location
+# Get Location
 
 This hook returns the current location object. It can be useful if you'd like to perform some side effect whenever the current location changes.
 

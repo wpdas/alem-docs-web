@@ -1,4 +1,4 @@
-## NEAR APIs and Components
+# NEAR APIs and Components
 
 The native NEAR VM (BOS) resources continue to function.
 

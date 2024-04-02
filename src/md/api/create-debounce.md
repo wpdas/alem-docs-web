@@ -1,4 +1,4 @@
-## Create Debounce
+# Create Debounce
 
 Create a debounced method to obtain the data after the desired interval.
 

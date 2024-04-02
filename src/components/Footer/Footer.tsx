@@ -16,12 +16,9 @@ const Footer = () => {
       </Logo>
       <Row>
         <Description>
-          This library is still under development.
-          <a
-            href="https://near.org/near/widget/ProfilePage?accountId=wendersonpires.near"
-            target="_blank"
-          >
-            wendersonpires.near
+          Want to support? Buy me a coffee 😃 <br />
+          <a href="https://app.potlock.org/?tab=project&projectId=alem-lib.near" target="_blank">
+            alem-lib.near
           </a>
         </Description>
       </Row>

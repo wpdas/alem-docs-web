@@ -1,4 +1,4 @@
-## Deploying App With GitHub Actions
+# Deploying App With GitHub Actions
 
 To deploy widgets on push to branch, create a GitHub Actions workflow file in your repository.
 

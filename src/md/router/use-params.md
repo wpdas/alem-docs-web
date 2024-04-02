@@ -1,4 +1,4 @@
-## Use Params
+# Use Params
 
 This hook returns all parameters provided by the URL.
 
