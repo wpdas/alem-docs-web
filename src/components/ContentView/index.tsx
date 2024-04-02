@@ -3,11 +3,7 @@ import Routes from "../../Routes";
 import { Container, Margin, ShareButton, TopSection } from "./styles";
 import ShareIcon from "../../assets/svgs/share-icon";
 
-type Props = {
-  libVersion: string;
-};
-
-const ContentView = ({ libVersion }: Props) => {
+const ContentView = () => {
   const site = isDevelopment
     ? "http://127.0.0.1:8080/alem-lib.near/widget/Index"
     : "https://alem.dev/";
@@ -35,7 +31,7 @@ const ContentView = ({ libVersion }: Props) => {
         </TopSection>
       )}
       <Margin />
-      <Routes libVersion={libVersion} />
+      <Routes />
     </Container>
   );
 };
