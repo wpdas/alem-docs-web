@@ -12,7 +12,7 @@ import {
   RedCode,
 } from "./styles";
 import { Row } from "../../components/UI";
-import { RoutesPath } from "../../routeProps";
+import { RoutesPath } from "../../routes/routeProps";
 
 export const AboutPage = () => {
   return (

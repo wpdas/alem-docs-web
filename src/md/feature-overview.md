@@ -2,6 +2,16 @@
 
 Alem is a web3 **JavaScript** / **TypeScript** library to create web3 apps for Near BOS. You can create your applications in a similar way to React. All components and other resources will be transformed into a file understandable by Near VM.
 
+**Tip:** Use function as much as possible. Even if it is an object to be shared, use a function to return the object. E.g.:
+
+```ts
+export const utils = () => ({
+  contractId: "contract-foo.near",
+  getItems: () => Storage.get("items"),
+  // ...
+});
+```
+
 ## Component
 
 You can create any component file using **JavaScript** or **TypeScript**. The entrypoint must be an App component like so:
