@@ -17,7 +17,7 @@ jobs:
   deploy-mainnet:
     uses: wpdas/alem/.github/workflows/deploy.yml@main
     with:
-      signer-account-address: <SIGNER_ACCOUNT_ID> # account to sign with (should match bos.config.json > account)
+      signer-account-address: <SIGNER_ACCOUNT_ID> # account to sign with (should match alem.config.json > account)
       signer-public-key: <SIGNER_PUBLIC_KEY>
     secrets:
       SIGNER_PRIVATE_KEY: ${{ secrets.SIGNER_PRIVATE_KEY }} # must be inside the github repo secrets
@@ -38,7 +38,7 @@ jobs:
   deploy-testnet:
     uses: wpdas/alem/.github/workflows/deploy-testnet.yml@main
     with:
-      signer-account-address: <SIGNER_ACCOUNT_ID> # account to sign with (should match bos.config.json > account)
+      signer-account-address: <SIGNER_ACCOUNT_ID> # account to sign with (should match alem.config.json > account)
       signer-public-key: <SIGNER_PUBLIC_KEY>
     secrets:
       SIGNER_PRIVATE_KEY: ${{ secrets.TESTNET_SIGNER_PRIVATE_KEY }} # must be inside the github repo secrets

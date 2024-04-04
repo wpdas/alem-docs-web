@@ -26,5 +26,8 @@
       "@components/": "src/components/",
       "@md/": "src/md/"
     }
+  },
+  "options": {
+    "hideAlemBar": true
   }
 }

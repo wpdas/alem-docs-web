@@ -1,6 +1,6 @@
 # Config File
 
-Create a `bos.config.json` file at the root of the project with the following content:
+Create a `alem.config.json` file at the root of the project with the following content:
 
 ```json
 {
@@ -46,7 +46,7 @@ You can optionally configure your application's path aliases so that it works to
 }
 ```
 
-You will want to configure the same behavior using the `bos.config.json` file as follows:
+You will want to configure the same behavior using the `alem.config.json` file as follows:
 
 ```json
 {
@@ -71,4 +71,38 @@ import Footer from "../../../components/Footer";
 // With path aliases
 import Hero from "@components/Hero";
 import Footer from "@components/Footer";
+```
+
+# Options
+
+It is possible to configure some compiler behaviors using the options session.
+
+## Keep Route
+
+`keepRoute` is only valid during development, and is automatically disabled in production.
+
+This property defines whether the route should remain the same during refreshes. This is only valid if the `Router` type is `"ContentBased"`.
+
+Default value is `false`.
+
+```json
+{
+  // ...
+  "options": {
+    "keepRoute": true
+  }
+}
+```
+
+## Hide Além Bar
+
+You can use `options.hideAlemBar` to prevent the Beyond top bar from being displayed. This setting applies only in the development environment.
+
+```json
+{
+  // ...
+  "options": {
+    "hideAlemBar": true
+  }
+}
 ```
