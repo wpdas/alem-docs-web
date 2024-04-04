@@ -17,3 +17,38 @@ export const SomeComponent = () => {
   );
 };
 ```
+
+You can also send params to the route:
+
+```tsx
+import { RouteLink } from "alem";
+
+export const SomeComponent = () => {
+  return (
+    <RouteLink
+      to="profile"
+      params={{ name: "Wendz", age: 33, profilePicture: "https://url.com/to/image.jpg" }}
+    >
+      <p>Go to Profile</p>
+    </RouteLink>
+  );
+};
+```
+
+Then, if you're using `"ContentBased"` Router, you can use `useRoutes().routeParams` to get the route params inside the page or use `useParams()` if you're using `"URLBased"` Router:
+
+```tsx
+import { useRoutes, useParams } from "alem";
+
+export const ProfilePage = () => {
+  // If using "ContentBased" Router
+  console.log(useRoutes().routeParams);
+  // { name: "Wendz", age: 33, profilePicture: "https://url.com/to/image.jpg" }
+
+  // If using "URLBased" Router
+  console.log(useParams());
+  // { name: "Wendz", age: "33", profilePicture: "https://url.com/to/image.jpg" }
+
+  //...
+};
+```

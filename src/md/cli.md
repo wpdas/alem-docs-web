@@ -55,7 +55,7 @@ Options:
 
 #### Command: `upload-metadata`
 
-Upload metadata to SocialDB. This is going to use the data provided by `bos.config.json` file. The content represents the app's details like `name, description, icon, tags, etc`. You can update this information manually by going to the widget metadata tab using the [Near Sandbox](https://near.org/sandbox).
+Upload metadata to SocialDB. This is going to use the data provided by `alem.config.json` file. The content represents the app's details like `name, description, icon, tags, etc`. You can update this information manually by going to the widget metadata tab using the [Near Sandbox](https://near.org/sandbox).
 
 ```bash
 Usage: alem upload-metadata [options]
