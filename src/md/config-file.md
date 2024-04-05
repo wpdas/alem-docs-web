@@ -96,7 +96,7 @@ Default value is `false`.
 
 ## Hide Além Bar
 
-You can use `options.hideAlemBar` to prevent the Beyond top bar from being displayed. This setting applies only in the development environment.
+You can use `options.hideAlemBar` to prevent the Além top bar from being displayed. This setting applies only in the development environment.
 
 ```json
 {
