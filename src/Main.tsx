@@ -1,4 +1,4 @@
-import { RouterProvider, asyncFetch, useEffect, useState } from "alem";
+import { RouterContext, asyncFetch, useEffect, useState } from "alem";
 import Modals from "./components/Modals/Modals";
 import {
   AppBackground,
@@ -21,7 +21,7 @@ const Main = () => {
     });
   }, []);
 
-  RouterProvider();
+  RouterContext();
 
   return (
     <div style={{ marginTop: "calc(-1 * var(--body-top-padding, 0))" }}>

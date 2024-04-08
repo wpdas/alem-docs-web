@@ -8,6 +8,7 @@ const Sidebar = () => {
 
   const [gettingStartedItems, setGettingStartedItems] = useState<(JSX.Element | undefined)[]>([]);
   const [routerItems, setRouterItems] = useState<(JSX.Element | undefined)[]>([]);
+  const [modulesItems, setModulesItems] = useState<(JSX.Element | undefined)[]>([]);
   const [contextItems, setContextItems] = useState<(JSX.Element | undefined)[]>([]);
   const [apisItems, setApisItems] = useState<(JSX.Element | undefined)[]>([]);
   const [bosItems, setBosItems] = useState<(JSX.Element | undefined)[]>([]);
@@ -15,12 +16,14 @@ const Sidebar = () => {
   useEffect(() => {
     const _gettingStartedItems = getLinksByCategory("Getting Started");
     const _routerItems = getLinksByCategory("Router");
+    const _modulesItems = getLinksByCategory("Modules");
     const _contextItems = getLinksByCategory("Context");
     const _apisItems = getLinksByCategory("APIs");
     const _bosItems = getLinksByCategory("BOS");
 
     setGettingStartedItems(_gettingStartedItems);
     setRouterItems(_routerItems);
+    setModulesItems(_modulesItems);
     setContextItems(_contextItems);
     setApisItems(_apisItems);
     setBosItems(_bosItems);
@@ -37,6 +40,11 @@ const Sidebar = () => {
       <div>
         <h3>Getting Started</h3>
         {gettingStartedItems}
+      </div>
+
+      <div>
+        <h3>NPM Modules</h3>
+        {modulesItems}
       </div>
 
       <div>

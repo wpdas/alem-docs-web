@@ -8,7 +8,7 @@ import { useRoutes } from "alem";
 export const SomeComponent = () => {
   const routesProps = useRoutes();
   console.log(routesProps);
-  // { routeParams: {}, routesInitialized: true, activeRoute: 'home', routeParameterName: 'path', routes: ['home', 'profile'], routeType: 'ContentBased' }
+  // { routeParams: {}, routesInitialized: true, activeRoute: 'home', routeParameterName: 'path', routes: ['home', 'profile'], routeType: 'ContentBased', history: [{...}] }
 
   return "";
 };

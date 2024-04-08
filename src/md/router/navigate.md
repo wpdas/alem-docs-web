@@ -4,12 +4,16 @@ This feature makes it possible to programmatically navigate to available routes.
 
 It should be used with `Router`.
 
+## Navigate To
+
+Use `navigate.to` to navigate through the routes.
+
 ```tsx
 import { navigate } from "alem";
 
 export const SomeComponent = () => {
   const onClickHandler = () => {
-    navigate("profile");
+    navigate.to("profile");
   };
 
   return <button onClick={onClickHandler}>Go to Profile</button>;
@@ -23,7 +27,11 @@ import { navigate } from "alem";
 
 export const SomeComponent = () => {
   const onClickHandler = () => {
-    navigate("profile", { name: "Wendz", age: 33, profilePicture: "https://url.com/to/image.jpg" });
+    navigate.to("profile", {
+      name: "Wendz",
+      age: 33,
+      profilePicture: "https://url.com/to/image.jpg",
+    });
   };
 
   return <button onClick={onClickHandler}>Go to Profile</button>;
@@ -40,5 +48,21 @@ export const ProfilePage = () => {
   // { name: "Wendz", age: 33, profilePicture: "https://url.com/to/image.jpg" }
 
   //...
+};
+```
+
+## Navigate Back
+
+Use `navigate.back` to go to the previous route.
+
+```tsx
+import { navigate } from "alem";
+
+export const SomeComponent = () => {
+  const onClickHandler = () => {
+    navigate.back();
+  };
+
+  return <button onClick={onClickHandler}>Go Back</button>;
 };
 ```

@@ -3,16 +3,19 @@ import { RoutesPath } from "./routeProps";
 const nextPrevRoutes = () => ({
   // Getting Started
   [RoutesPath.about.path]: {
-    next: RoutesPath.featureOverview.path,
-  },
-  [RoutesPath.featureOverview.path]: {
-    prev: RoutesPath.about.path,
     next: RoutesPath.installation.path,
   },
+
   [RoutesPath.installation.path]: {
-    prev: RoutesPath.featureOverview.path,
+    prev: RoutesPath.about.path,
+    next: RoutesPath.featureOverview.path,
+  },
+
+  [RoutesPath.featureOverview.path]: {
+    prev: RoutesPath.installation.path,
     next: RoutesPath.configFile.path,
   },
+
   [RoutesPath.configFile.path]: {
     prev: RoutesPath.installation.path,
     next: RoutesPath.cli.path,
@@ -21,8 +24,20 @@ const nextPrevRoutes = () => ({
     prev: RoutesPath.configFile.path,
     next: RoutesPath.deployingWithGithubActions.path,
   },
+
   [RoutesPath.deployingWithGithubActions.path]: {
     prev: RoutesPath.cli.path,
+    next: RoutesPath.installingModules.path,
+  },
+
+  // Modules
+  [RoutesPath.installingModules.path]: {
+    prev: RoutesPath.deployingWithGithubActions.path,
+    next: RoutesPath.howToUseModules.path,
+  },
+
+  [RoutesPath.howToUseModules.path]: {
+    prev: RoutesPath.installingModules.path,
     next: RoutesPath.routes.path,
   },
 

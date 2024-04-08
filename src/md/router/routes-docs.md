@@ -7,7 +7,7 @@ There are two types of route managers provided by Além: `Router` and `SimpleRou
 This component is responsible for managing the content to be displayed on the screen according to the active route. You can use the `createRoute` resource to create application routes and pass them to the Router.
 
 ```tsx
-import { RouterProvider, Router, createRoute } from "alem";
+import { RouterContext, Router, createRoute } from "alem";
 
 import HomePage from "./HomePage";
 import ProfilePage from "./ProfilePage";
@@ -15,11 +15,11 @@ import ProfilePage from "./ProfilePage";
 const AppRoutes = () => {
 
   // It must be placed above all resources that will use the Router tools.
-  RouterProvider();
+  RouterContext();
 
   // Creating routes
-  const HomePageRoute = createRoute("home", HomePage);
-  const ProfilePageRoute = createRoute("profile", ProfilePage);
+  const HomePageRoute = createRoute("home", () => <HomePage />);
+  const ProfilePageRoute = createRoute("profile", () => <ProfilePage />);
 
   const routes = [
     HomePageRoute,
@@ -74,8 +74,8 @@ import ProfilePage from "./ProfilePage";
 
 const AppRoutes = () => {
   // Creating routes
-  const HomePageRoute = createRoute("home", HomePage);
-  const ProfilePageRoute = createRoute("profile", ProfilePage);
+  const HomePageRoute = createRoute("home", () => <HomePage />);
+  const ProfilePageRoute = createRoute("profile", () => <ProfilePage />);
   const routes = [HomePageRoute, ProfilePageRoute];
 
   // parameterName => Optional: default is "path"

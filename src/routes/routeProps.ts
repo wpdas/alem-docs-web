@@ -1,6 +1,7 @@
 export const Categories = {
   gettingStarted: "Getting Started",
   router: "Router",
+  modules: "Modules",
   context: "Context",
   apis: "APIs",
   bos: "BOS",
@@ -16,19 +17,24 @@ export const RoutesPath = {
     category: Categories.gettingStarted,
   },
   // Getting Started
-  featureOverview: {
-    path: "feature-overview",
-    title: "Feature Overview",
-    category: Categories.gettingStarted,
-  },
   installation: {
     path: "installation",
     title: "Installation",
     category: Categories.gettingStarted,
   },
+  featureOverview: {
+    path: "feature-overview",
+    title: "Feature Overview",
+    category: Categories.gettingStarted,
+  },
   configFile: {
     path: "config-file",
     title: "Config File",
+    category: Categories.gettingStarted,
+  },
+  cssFiles: {
+    path: "css-files",
+    title: "CSS Files",
     category: Categories.gettingStarted,
   },
   cli: {
@@ -40,6 +46,18 @@ export const RoutesPath = {
     path: "deploying-with-github-actions",
     title: "Deploying with GitHub Actions",
     category: Categories.gettingStarted,
+  },
+
+  // Modules
+  installingModules: {
+    path: "installing-modules",
+    title: "Installing Modules",
+    category: Categories.modules,
+  },
+  howToUseModules: {
+    path: "how-to-use-modules",
+    title: "How to Use",
+    category: Categories.modules,
   },
 
   // Router
