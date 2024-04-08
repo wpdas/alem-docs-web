@@ -15,6 +15,7 @@ const MobileNavBar = () => {
 
   const [gettingStartedItems, setGettingStartedItems] = useState<(JSX.Element | undefined)[]>([]);
   const [routerItems, setRouterItems] = useState<(JSX.Element | undefined)[]>([]);
+  const [modulesItems, setModulesItems] = useState<(JSX.Element | undefined)[]>([]);
   const [contextItems, setContextItems] = useState<(JSX.Element | undefined)[]>([]);
   const [apisItems, setApisItems] = useState<(JSX.Element | undefined)[]>([]);
   const [bosItems, setBosItems] = useState<(JSX.Element | undefined)[]>([]);
@@ -22,12 +23,14 @@ const MobileNavBar = () => {
   useEffect(() => {
     const _gettingStartedItems = getLinksByCategory("Getting Started", closeMenu);
     const _routerItems = getLinksByCategory("Router", closeMenu);
+    const _modulesItems = getLinksByCategory("Modules", closeMenu);
     const _contextItems = getLinksByCategory("Context", closeMenu);
     const _apisItems = getLinksByCategory("APIs", closeMenu);
     const _bosItems = getLinksByCategory("BOS", closeMenu);
 
     setGettingStartedItems(_gettingStartedItems);
     setRouterItems(_routerItems);
+    setModulesItems(_modulesItems);
     setContextItems(_contextItems);
     setApisItems(_apisItems);
     setBosItems(_bosItems);
@@ -62,6 +65,11 @@ const MobileNavBar = () => {
         <div>
           <h3>Getting Started</h3>
           {gettingStartedItems}
+        </div>
+
+        <div>
+          <h3>NPM Modules</h3>
+          {modulesItems}
         </div>
 
         <div>

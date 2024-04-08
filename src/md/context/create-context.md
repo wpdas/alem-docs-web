@@ -19,9 +19,7 @@ interface UserContextProps {
 
 const UserProvider = () => {
   // Create a provider using a reference key
-  // setDefaultData: used to set initial data
-  // updateData: used to update data
-  const { setDefaultData, updateData } = createContext<UserContextProps>("user-provider");
+  const { setDefaultData, updateData, getSelf } = createContext<UserContextProps>("user-provider");
 
   // Initial / default data
   setDefaultData({
@@ -30,6 +28,12 @@ const UserProvider = () => {
   });
 };
 ```
+
+**API**
+
+- **setDefaultData:** Method used to set the default data;
+- **updateData:** Method used to update data;
+- **getSelf:** Returns the current state of the context data;
 
 # Use Context
 
@@ -80,7 +84,7 @@ interface CartContextProps {
 }
 
 const CartProvider = () => {
-  const { setDefaultData, updateData } = createContext<CartContextProps>("cart-provider");
+  const { setDefaultData, updateData, getSelf } = createContext<CartContextProps>("cart-provider");
 
   // Initial / default data
   setDefaultData({
@@ -88,7 +92,7 @@ const CartProvider = () => {
     ready: false,
 
     fetchCartItems: () => {
-      const self = useContext<CartContextProps>("cart-context");
+      const self = getSelf();
 
       if (!self.ready) {
         asyncFetch("https://api.com/cart/items").then((response) => {
@@ -103,7 +107,7 @@ const CartProvider = () => {
   });
 
   // (Optional): Auto fetch cart items
-  const self = useContext<CartContextProps>("cart-context");
+  const self = getSelf();
   if (!self.ready) {
     self.fetchCartItems();
   }

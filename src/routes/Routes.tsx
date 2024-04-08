@@ -20,6 +20,9 @@ import IsDevelopment from "@md/api/IsDevelopment";
 import BosOverview from "@md/BosOverview";
 import CreateDebounce from "@md/api/CreateDebounce";
 import RoutesDocs from "@md/router/RoutesDocs";
+import CssFiles from "@app/md/CssFiles";
+import InstallingModules from "@app/md/modules/InstallingModules";
+import HowToUseModules from "@app/md/modules/HowToUseModules";
 import { FooterNavContainer, NextPrevButton } from "./styles";
 
 const Routes = () => {
@@ -33,12 +36,13 @@ const Routes = () => {
 
   const routes = [
     createRoute(RoutesPath.about.path, AboutPage),
+    createRoute(RoutesPath.installation.path, Installation),
     {
       path: RoutesPath.featureOverview.path,
       component: FeatureOverview,
     },
-    createRoute(RoutesPath.installation.path, Installation),
     createRoute(RoutesPath.configFile.path, ConfigFile),
+    createRoute(RoutesPath.cssFiles.path, CssFiles),
     createRoute(RoutesPath.cli.path, Cli),
     createRoute(RoutesPath.deployingWithGithubActions.path, DeployingWithGithubActions),
 
@@ -61,6 +65,10 @@ const Routes = () => {
 
     // BOS API
     createRoute(RoutesPath.bosProps.path, BosOverview),
+
+    // Modules
+    createRoute(RoutesPath.installingModules.path, InstallingModules),
+    createRoute(RoutesPath.howToUseModules.path, HowToUseModules),
   ];
 
   return (
