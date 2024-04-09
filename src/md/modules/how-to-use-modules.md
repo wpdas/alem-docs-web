@@ -4,16 +4,17 @@ To use the resources of the installed modules you will need to follow the follow
 
 ## ModulesProvider
 
-Wrap the components that will use the modules with `ModulesProvider`.
+Add `ModulesProvider` at the top layer of components that will use the modules.
 
 ```tsx
 import { ModulesProvider } from "alem";
 
 const SomeComponent = () => {
   return (
-    <ModulesProvider>
+    <>
+      <ModulesProvider />
       <HomePage>
-    </ModulesProvider>
+    </>
   )
 }
 ```
