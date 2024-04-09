@@ -26,7 +26,7 @@ export const AboutPage = () => {
         <Title>Além</Title>
         <Description>The library to build web3 applications for Near BOS</Description>
         <Row>
-          <CustomLink href="https://github.com/wpdas/alem-docs-web" target="_blank">
+          <CustomLink href="https://github.com/wpdas/bitbabble-dchat" target="_blank">
             <p>See an Example</p>
           </CustomLink>
 

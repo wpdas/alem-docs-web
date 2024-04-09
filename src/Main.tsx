@@ -36,7 +36,6 @@ const Main = () => {
         <SideBarSwitcher>
           <Sidebar />
         </SideBarSwitcher>
-
         <ContentView />
       </AppContainer>
       <Footer />
