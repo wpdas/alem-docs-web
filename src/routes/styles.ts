@@ -13,7 +13,7 @@ export const FooterNavContainer = styled.div<{ hasPrevious?: boolean; hasNext?: 
   margin-top: 28px;
 `;
 
-export const NextPrevButton = styled.a<{ next?: boolean }>`
+export const NextPrevButton = styled("Link")`
   width: 45%;
   padding: 18px;
   display: flex;

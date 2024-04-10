@@ -2,7 +2,7 @@
 
 This feature makes it possible to programmatically navigate to available routes. The URL will not be affected!
 
-It should be used with `Router`.
+This feature is designed to work only with the `ContentBased` route type. It also works with the `URLBased` type, but routes defined by `navigate` will not have priority over routes defined in the browser URL.
 
 ## Navigate To
 

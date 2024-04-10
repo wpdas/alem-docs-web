@@ -1,6 +1,6 @@
 # Routes
 
-There are two types of route managers provided by Além: `Router` and `SimpleRouter`.
+Feature to manage the application routes.
 
 # Router
 
@@ -43,8 +43,8 @@ export default AppRoutes;
 
 `Router` can handle links in two ways:
 
-- **URLBased:** This is the default behavior. Every link will reload the page by changing the URL structure in the browser;
-- **ContentBased:** This behavior does not change the URL in the browser and does not reload the page. Therefore, it is faster to display content on the screen.
+- **URLBased:** This is the default behavior. Every link will change the URL structure in the browser;
+- **ContentBased:** This behavior does not change the URL in the browser. Therefore, it is faster to display content on the screen.
 
 You can pass the type of behavior using the `type` property of Routes.
 
@@ -60,33 +60,4 @@ You can pass the type of behavior using the `type` property of Routes.
   routes={[FeatureOverviewRoute, StateManagementRoute]}
   type="ContentBased"
 />
-```
-
-# SimpleRouter
-
-This router uses the URL to determine which content to display on the screen. It works similarly to the `URLBased` approach of the `Router`.
-
-```tsx
-import { SimpleRouter, createRoute } from "alem";
-
-import HomePage from "./HomePage";
-import ProfilePage from "./ProfilePage";
-
-const AppRoutes = () => {
-  // Creating routes
-  const HomePageRoute = createRoute("home", () => <HomePage />);
-  const ProfilePageRoute = createRoute("profile", () => <ProfilePage />);
-  const routes = [HomePageRoute, ProfilePageRoute];
-
-  // parameterName => Optional: default is "path"
-  return <SimpleRouter routes={routes} parameterName="tab" />;
-};
-
-export default AppRoutes;
-```
-
-Using `SimpleRouter`, you can use any anchor element `<a></a>` to navigate to another page, for example:
-
-```tsx
-<a href="tab=profile">Go To Profile</p>
 ```
