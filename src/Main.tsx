@@ -1,4 +1,4 @@
-import { RouterContext, asyncFetch, useEffect, useState } from "alem";
+import { RouterContext, Storage, asyncFetch, useEffect, useState } from "alem";
 import Modals from "./components/Modals/Modals";
 import {
   AppBackground,
@@ -13,11 +13,12 @@ import ContentView from "./components/ContentView";
 import Footer from "@app/components/Footer/Footer";
 
 const Main = () => {
-  const [libVersion, setLibVersion] = useState("");
+  const [libVersion, setLibVersion] = useState(Storage.get("version"));
 
   useEffect(() => {
     asyncFetch("https://api.github.com/repos/wpdas/alem/tags").then((data) => {
       setLibVersion(data.body[0].name.replace("v", ""));
+      Storage.set("version", data.body[0].name.replace("v", ""));
     });
   }, []);
 
@@ -27,7 +28,7 @@ const Main = () => {
     <div style={{ marginTop: "calc(-1 * var(--body-top-padding, 0))" }}>
       <Modals />
       <Banner>
-        Alem is currently on version <span>{libVersion}</span>.
+        Alem is currently on version <span>{libVersion}</span>
       </Banner>
       <MobileNavBarSwitcher>
         <MobileNavBar />
