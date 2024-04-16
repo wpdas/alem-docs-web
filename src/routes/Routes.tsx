@@ -3,6 +3,7 @@ import { AboutPage } from "../pages/About/About";
 import { RoutesPath } from "./routeProps";
 import nextPrevRoutes from "./nextPrevRoutes";
 import getRouteTitleByPath from "./getRouteTitleByPath";
+import { FooterNavContainer, NextPrevButton } from "./styles";
 import FeatureOverview from "@md/FeatureOverview";
 import Installation from "@md/Installation";
 import ConfigFile from "@md/ConfigFile";
@@ -23,7 +24,7 @@ import RoutesDocs from "@md/router/RoutesDocs";
 import CssFiles from "@app/md/CssFiles";
 import InstallingModules from "@app/md/modules/InstallingModules";
 import HowToUseModules from "@app/md/modules/HowToUseModules";
-import { FooterNavContainer, NextPrevButton } from "./styles";
+import Environment from "@app/md/Environment";
 
 const Routes = () => {
   const urlParams = useParams();
@@ -45,6 +46,7 @@ const Routes = () => {
     createRoute(RoutesPath.cssFiles.path, CssFiles),
     createRoute(RoutesPath.cli.path, Cli),
     createRoute(RoutesPath.deployingWithGithubActions.path, DeployingWithGithubActions),
+    createRoute(RoutesPath.environment.path, Environment),
 
     // Router
     createRoute(RoutesPath.routes.path, RoutesDocs),

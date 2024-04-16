@@ -68,7 +68,7 @@ const MobileNavBar = () => {
         </div>
 
         <div>
-          <h3>Modules (Experimental)</h3>
+          <h3>Modules</h3>
           {modulesItems}
         </div>
 

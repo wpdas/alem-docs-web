@@ -5,15 +5,15 @@
   "repository": "https://github.com/wpdas/alem-docs-web.git",
   "license": "MIT",
   "scripts": {
-    "start": "MINIFY=false NODE_ENV=development alem dev --network testnet",
-    "start:mainnet": "MINIFY=false NODE_ENV=development alem dev",
+    "start": "alem dev --network testnet",
+    "start:mainnet": "alem dev",
     "generate-tsx-from-md": "node ./scripts/generate-tsx-from-md",
     "build": "alem build",
     "deploy:mainnet": "npm run build; alem deploy",
     "deploy:testnet": "npm run build; alem deploy --network testnet"
   },
   "dependencies": {
-    "alem": "1.0.0-beta.15"
+    "alem": "1.0.0-beta.18"
   },
   "devDependencies": {
     "@types/styled-components": "^5.1.26",

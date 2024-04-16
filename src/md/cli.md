@@ -1,6 +1,16 @@
 # Além CLI
 
-Além has its own command system.
+Além has its own command system. To use it, install Além globally.
+
+```sh
+# npm
+npm install alem -g
+```
+
+```sh
+# yarn
+yarn global add alem
+```
 
 ### Commands
 

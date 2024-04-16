@@ -48,6 +48,12 @@ export const RoutesPath = {
     category: Categories.gettingStarted,
   },
 
+  environment: {
+    path: "environment",
+    title: "Environment",
+    category: Categories.gettingStarted,
+  },
+
   // Modules
   installingModules: {
     path: "installing-modules",

@@ -27,6 +27,11 @@ const nextPrevRoutes = () => ({
 
   [RoutesPath.deployingWithGithubActions.path]: {
     prev: RoutesPath.cli.path,
+    next: RoutesPath.environment.path,
+  },
+
+  [RoutesPath.environment.path]: {
+    prev: RoutesPath.deployingWithGithubActions.path,
     next: RoutesPath.installingModules.path,
   },
 
