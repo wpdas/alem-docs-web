@@ -18,8 +18,8 @@ const AppRoutes = () => {
   RouterContext();
 
   // Creating routes
-  const HomePageRoute = createRoute("home", () => <HomePage />);
-  const ProfilePageRoute = createRoute("profile", () => <ProfilePage />);
+  const HomePageRoute = createRoute("home", HomePage);
+  const ProfilePageRoute = createRoute("profile", ProfilePage);
 
   const routes = [
     HomePageRoute,
