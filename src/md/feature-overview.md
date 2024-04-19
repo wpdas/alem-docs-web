@@ -231,10 +231,13 @@ const SomeComponent = () => {
 };
 ```
 
-## Limitations
+# Limitations
 
-- The use of the `import * foo from './foo'` signature is not supported. This is intentional, as the idea is to import only the necessary fragments into the Widget.
-- Além fixes duplicate item names being exported by the application automatically, but you should avoid importing a resource that has the same name as any variable within your component. E.g.:
+## Import \*
+
+The use of the `import * foo from './foo'` signature is not supported. This is intentional, as the idea is to import only the necessary fragments into the Widget.
+
+Além fixes duplicate item names being exported by the application automatically, but you should avoid importing a resource that has the same name as any variable within your component. E.g.:
 
 ✅ **- Right**
 
@@ -284,3 +287,61 @@ const HomePage = () => {
 
 export default HomePage;
 ```
+
+## Sub-Components & Components
+
+At the moment, if you have a component with sub-components, and you also have another component being imported that uses the same name as the sub-component, a compilation failure may occur as currently the compiler automatically renames duplicate component names.
+
+For example:
+
+❌ **- Avoid it**
+
+```tsx
+// Exporting components
+export const Content = () => <p>A</p>;
+```
+
+```tsx
+// Importing components + Using Radix components
+import { Content } from "./Foo";
+
+const MyComponent = () => {
+  return (
+    <>
+      {/* Radix Select component */}
+      <Select.Content>
+        <Content />
+      </Select.Content>
+    </>
+  );
+};
+```
+
+If by chance, in another file there is another component with the name `Content`, the `Content` being imported will have its name changed automatically and this will also affect `Select.Content`, thus generating an error.
+
+To avoid this problem, if a sub-component is used in the same file, change the component name:
+
+✅ **- Right**
+
+```tsx
+// Exporting components
+export const ContentFoo = () => <p>A</p>;
+```
+
+```tsx
+// Importing components + Using Radix components
+import { ContentFoo } from "./Foo";
+
+const MyComponent = () => {
+  return (
+    <>
+      {/* Radix Select component */}
+      <Select.Content>
+        <ContentFoo />
+      </Select.Content>
+    </>
+  );
+};
+```
+
+This way, if `ContentFoo` has its name changed by the compiler, the sub-component (Select -> **Content**) `Select.Content` will not be changed.
