@@ -1,9 +1,15 @@
-import { useEffect, getLocation, useState, useRoutes, props } from "alem";
+import { useEffect, getLocation, useState, useRoutes, Storage } from "alem";
 import { SidebarAboutLogo, Container } from "./styles";
 import getLinksByCategory from "../../utils/getLinksByCategory";
+import CollapseList from "../CollapseList";
+import { Categories, RoutesPath } from "@app/routes/routeProps";
 
 const Sidebar = () => {
   const { pathname } = getLocation();
+  const entries = Object.entries(RoutesPath);
+  const routePropsEntry = entries.find((entry) => entry[1].path === pathname);
+  const routeProps = routePropsEntry ? routePropsEntry[1] : null;
+
   const { routeParameterName } = useRoutes();
 
   const [gettingStartedItems, setGettingStartedItems] = useState<(JSX.Element | undefined)[]>([]);
@@ -29,6 +35,40 @@ const Sidebar = () => {
     setBosItems(_bosItems);
   }, [pathname, routeParameterName]);
 
+  const [openCategories, setOpenCategories] = useState<string[]>([]);
+
+  const handleOpenRegister = (isOpen: boolean, category: string) => {
+    if (!isOpen) {
+      const updatedOpenCategories = openCategories.filter((item) => item !== category);
+      setOpenCategories(updatedOpenCategories);
+    } else {
+      if (!openCategories.includes(category)) {
+        const updatedOpenCategories = [...openCategories, category];
+        setOpenCategories(updatedOpenCategories);
+      }
+    }
+  };
+
+  // Read previous openCategories
+  useEffect(() => {
+    const previousOpenCategories = Storage.get("openCategories");
+    if (previousOpenCategories) {
+      setOpenCategories(previousOpenCategories);
+    }
+  }, []);
+
+  // On change openCategories: store on storage
+  useEffect(() => {
+    Storage.set("openCategories", openCategories);
+  }, [openCategories]);
+
+  // Handle the routeProps
+  useEffect(() => {
+    if (routeProps) {
+      handleOpenRegister(true, routeProps.category);
+    }
+  }, [routeProps]);
+
   return (
     <Container>
       <SidebarAboutLogo
@@ -38,33 +78,59 @@ const Sidebar = () => {
       />
 
       <div>
-        <h3>Getting Started</h3>
-        {gettingStartedItems}
+        <CollapseList title="Getting Started" initialState="open">
+          <>{gettingStartedItems}</>
+        </CollapseList>
       </div>
 
       <div>
-        <h3>Modules</h3>
-        {modulesItems}
+        <CollapseList
+          title="Modules"
+          initialState={openCategories.includes(Categories.modules) ? "open" : "closed"}
+          onClick={(isOpen) => handleOpenRegister(isOpen, Categories.modules)}
+        >
+          <>{modulesItems}</>
+        </CollapseList>
       </div>
 
       <div>
-        <h3>Routes</h3>
-        {routerItems}
+        <CollapseList
+          title="Routes"
+          initialState={openCategories.includes(Categories.router) ? "open" : "closed"}
+          onClick={(isOpen) => handleOpenRegister(isOpen, Categories.router)}
+        >
+          <>{routerItems}</>
+        </CollapseList>
       </div>
 
       <div>
-        <h3>Context</h3>
-        {contextItems}
+        <CollapseList
+          title="Context"
+          initialState={openCategories.includes(Categories.context) ? "open" : "closed"}
+          onClick={(isOpen) => handleOpenRegister(isOpen, Categories.context)}
+        >
+          <>{contextItems}</>
+        </CollapseList>
       </div>
 
       <div>
-        <h3>Utils</h3>
-        {apisItems}
+        <CollapseList
+          title="Utils"
+          initialState={openCategories.includes(Categories.apis) ? "open" : "closed"}
+          onClick={(isOpen) => handleOpenRegister(isOpen, Categories.apis)}
+        >
+          <>{apisItems}</>
+        </CollapseList>
       </div>
 
       <div>
-        <h3>NEAR VM (BOS)</h3>
-        {bosItems}
+        <CollapseList
+          title="NEAR VM (BOS)"
+          initialState={openCategories.includes(Categories.bos) ? "open" : "closed"}
+          onClick={(isOpen) => handleOpenRegister(isOpen, Categories.bos)}
+        >
+          <>{bosItems}</>
+        </CollapseList>
       </div>
     </Container>
   );

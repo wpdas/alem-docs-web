@@ -25,6 +25,7 @@ import CssFiles from "@app/md/CssFiles";
 import InstallingModules from "@app/md/modules/InstallingModules";
 import HowToUseModules from "@app/md/modules/HowToUseModules";
 import Environment from "@app/md/Environment";
+import GetAlemEnvironment from "@app/md/api/GetAlemEnvironment";
 
 const Routes = () => {
   const urlParams = useParams();
@@ -64,6 +65,7 @@ const Routes = () => {
     createRoute(RoutesPath.promisify.path, Promisify),
     createRoute(RoutesPath.isDevelopment.path, IsDevelopment),
     createRoute(RoutesPath.createDebounce.path, CreateDebounce),
+    createRoute(RoutesPath.getAlemEnvironment.path, GetAlemEnvironment),
 
     // BOS API
     createRoute(RoutesPath.bosProps.path, BosOverview),

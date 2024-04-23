@@ -237,6 +237,8 @@ const SomeComponent = () => {
 
 The use of the `import * foo from './foo'` signature is not supported. This is intentional, as the idea is to import only the necessary fragments into the Widget.
 
+## Internal Duplicate Items
+
 Além fixes duplicate item names being exported by the application automatically, but you should avoid importing a resource that has the same name as any variable within your component. E.g.:
 
 ✅ **- Right**
