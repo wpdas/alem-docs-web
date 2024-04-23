@@ -93,12 +93,16 @@ const nextPrevRoutes = () => ({
   },
   [RoutesPath.createDebounce.path]: {
     prev: RoutesPath.isDevelopment.path,
+    next: RoutesPath.getAlemEnvironment.path,
+  },
+  [RoutesPath.getAlemEnvironment.path]: {
+    prev: RoutesPath.createDebounce.path,
     next: RoutesPath.bosProps.path,
   },
 
   // NEAR VM (BOS)
   [RoutesPath.bosProps.path]: {
-    prev: RoutesPath.createDebounce.path,
+    prev: RoutesPath.getAlemEnvironment.path,
   },
 });
 

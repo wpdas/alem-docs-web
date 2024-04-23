@@ -126,6 +126,11 @@ export const RoutesPath = {
     title: "Create Debounce",
     category: Categories.apis,
   },
+  getAlemEnvironment: {
+    path: "get-environment",
+    title: "Get Environment",
+    category: Categories.apis,
+  },
 
   // BOS API
   bosProps: {

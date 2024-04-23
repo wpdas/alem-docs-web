@@ -12,3 +12,5 @@ import { isDevelopment } from "alem";
 
 const answer = isDevelopment ? "Yep" : "Nope";
 ```
+
+You may want to use `getAlemEnvironment()` as it returns the value for the current environment.
