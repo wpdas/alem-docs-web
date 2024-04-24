@@ -77,6 +77,32 @@ import Footer from "@components/Footer";
 
 It is possible to configure some compiler behaviors using the options session.
 
+## Create Loader Widget
+
+This feature allows you to create an additional Widget that will serve as a Loader for the main Widget. You can optionally define which component will serve as the Loading display while the main Widget content is loaded. If no file is provided, the default Loading component of Além will be used.
+
+The generated file name will be a mix of the name of the main Widget + "Loader". For example: `IndexLoader`. It is up to you which file to use as the primary means of accessing your application.
+
+- **`createLoaderWidget`: boolean** - Should the Widget Loader be created?
+- **`loadingComponentFile`: string (optional)** - Path to the component that will serve as loading while the main Widget content is loaded.
+- **`loadingComponentName`: string (optional)** - Exact name of the component being loaded via `loadingComponentFile`. For example, if the loading file has this structure:
+
+```tsx
+const SuspenseLoading = () => <p>Loading...</p>;
+```
+
+So the name must be **SuspenseLoading**.
+
+**Config Example**
+
+```json
+"options": {
+    "createLoaderWidget": true,
+    "loadingComponentFile": "src/components/SuspenseLoading.tsx",
+    "loadingComponentName": "SuspenseLoading"
+  }
+```
+
 ## Keep Route
 
 `keepRoute` is only valid during development, and is automatically disabled in production.
