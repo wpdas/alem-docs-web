@@ -47,11 +47,13 @@ export const CustomAnchor = styled.div`
 `;
 
 export const CustomLink = styled.a`
+  display: flex;
   padding: 0.75rem 1.5rem;
   border-radius: 30px;
   border: 1px solid rgb(8 126 164);
   background-color: rgb(8 126 164);
   margin-right: 12px;
+  text-decoration: none;
 
   p {
     color: #fff !important;
@@ -61,7 +63,7 @@ export const CustomLink = styled.a`
   }
 
   :hover {
-    background-color: rgb(8 126 164);
+    background-color: rgb(8 116 154);
   }
 `;
 
@@ -116,4 +118,29 @@ export const RedCode = styled.span`
   border: 0 solid #e5e7eb;
   color: rgb(67 74 90);
   padding: 0.125rem 0.25rem;
+`;
+
+export const AppsList = styled.div`
+  display: flex;
+  gap: 2rem;
+`;
+
+export const ExampleApp = styled.a`
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+
+  img {
+    border-radius: 8px;
+    height: 60px;
+  }
+  span {
+    margin-top: 12px;
+    color: rgb(35, 39, 47);
+    font-weight: 600;
+    text-decoration: none;
+  }
 `;

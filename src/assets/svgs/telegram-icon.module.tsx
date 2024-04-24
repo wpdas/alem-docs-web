@@ -1,5 +1,6 @@
-const TelegramIcon = () => (
+const TelegramIcon = (props: any) => (
   <svg
+    {...props}
     width="24px"
     height="24px"
     version="1.1"

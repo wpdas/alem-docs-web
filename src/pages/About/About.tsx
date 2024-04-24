@@ -1,4 +1,6 @@
 import { RouteLink } from "alem";
+import { Row } from "../../components/UI";
+import { RoutesPath } from "../../routes/routeProps";
 import {
   Container,
   Logo,
@@ -10,9 +12,10 @@ import {
   CustomAnchor,
   BlueCode,
   RedCode,
+  ExampleApp,
+  AppsList,
 } from "./styles";
-import { Row } from "../../components/UI";
-import { RoutesPath } from "../../routes/routeProps";
+import TelegramIcon from "@app/assets/svgs/telegram-icon.module";
 
 export const AboutPage = () => {
   return (
@@ -26,8 +29,9 @@ export const AboutPage = () => {
         <Title>Além</Title>
         <Description>The library to build web3 applications for Near BOS</Description>
         <Row>
-          <CustomLink href="https://github.com/wpdas/bitbabble-dchat" target="_blank">
-            <p>See an Example</p>
+          <CustomLink href="https://t.me/alemlib" target="_blank">
+            <TelegramIcon fill="white" />
+            <p style={{ marginLeft: 8 }}>Telegram</p>
           </CustomLink>
 
           <CustomAnchor>
@@ -35,6 +39,39 @@ export const AboutPage = () => {
           </CustomAnchor>
         </Row>
       </Container>
+      <Section
+        style={{
+          marginTop: 40,
+          paddingTop: 20,
+          paddingBottom: 50,
+          marginBottom: 60,
+          backgroundColor: "#fff",
+        }}
+      >
+        <p>Some dApps built using this tool</p>
+        <AppsList>
+          <ExampleApp href="https://github.com/wpdas/alem-docs-web" target="_blank">
+            <img
+              src="https://cdn.jsdelivr.net/gh/wpdas/alem/docs/assets/near-script-logo.png"
+              alt="Além Docs"
+            />
+            <span>Além Docs</span>
+          </ExampleApp>
+
+          <ExampleApp href="https://github.com/wpdas/bitbabble-dchat" target="_blank">
+            <img
+              src="https://ipfs.near.social/ipfs/bafkreiegyjsgok6ctnurix3shkm7mrbdqzclfqpsh4tltnkxqyuxzgvbk4"
+              alt="Bit Babble"
+            />
+            <span>Bit Babble</span>
+          </ExampleApp>
+
+          <ExampleApp href="https://github.com/PotLock/bos-app-alem" target="_blank">
+            <img src="https://app.potlock.org/favicon.png" alt="PotLock" />
+            <span>PotLock</span>
+          </ExampleApp>
+        </AppsList>
+      </Section>
       <Section style={{ backgroundColor: "#fff", paddingTop: 40 }}>
         <img
           src="https://cdn.jsdelivr.net/gh/wpdas/alem-docs-web/src/md/assets/diagram.jpg"

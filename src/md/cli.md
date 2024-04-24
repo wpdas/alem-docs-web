@@ -46,7 +46,13 @@ Options:
 Build the project:
 
 ```bash
-Usage: alem build
+Usage: alem build [options]
+
+Build the project
+
+Options:
+  -n, --network <network>  Network where the app will be running (default: "mainnet")
+  -h, --help               display help for command
 ```
 
 This will output valid widget code to the `/build` directory.
