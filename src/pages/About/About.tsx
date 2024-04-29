@@ -1,6 +1,6 @@
 import { RouteLink } from "alem";
 import { Row } from "../../components/UI";
-import { RoutesPath } from "../../routes/routeProps";
+import { RoutesPath } from "../../modules/routes/routeProps";
 import {
   Container,
   Logo,

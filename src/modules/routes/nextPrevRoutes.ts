@@ -32,12 +32,18 @@ const nextPrevRoutes = () => ({
 
   [RoutesPath.environment.path]: {
     prev: RoutesPath.deployingWithGithubActions.path,
+    next: RoutesPath.aboutLocalModules.path,
+  },
+
+  // Local Modules
+  [RoutesPath.aboutLocalModules.path]: {
+    prev: RoutesPath.environment.path,
     next: RoutesPath.installingModules.path,
   },
 
   // Modules
   [RoutesPath.installingModules.path]: {
-    prev: RoutesPath.deployingWithGithubActions.path,
+    prev: RoutesPath.aboutLocalModules.path,
     next: RoutesPath.howToUseModules.path,
   },
 

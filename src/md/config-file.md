@@ -132,3 +132,17 @@ You can use `options.hideAlemBar` to prevent the Além top bar from being displa
   }
 }
 ```
+
+# Local Modules Options
+
+All files inside the `src/modules` folder will be compiled as local modules. To filter any file that you do not want to be interpreted as a compiler even though it is in the `src/modules` folder, you must make the following configuration:
+
+Inside the `alem.config.json` file add the list of part of file names you want to ignore.
+
+```json
+"modules": {
+  "ignoreFileIfIncludes": ["styles"]
+}
+```
+
+In the example above, any file that has "styles" as part of its name will be ignored and will be compiled as a normal file (script file, stateless component or stateful component).

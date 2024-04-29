@@ -1,6 +1,7 @@
 export const Categories = {
   gettingStarted: "Getting Started",
   router: "Router",
+  localModules: "Local Modules",
   modules: "Modules",
   context: "Context",
   apis: "APIs",
@@ -54,10 +55,17 @@ export const RoutesPath = {
     category: Categories.gettingStarted,
   },
 
+  // Local Modules
+  aboutLocalModules: {
+    path: "using-local-modules",
+    title: "Using Local Modules",
+    category: Categories.localModules,
+  },
+
   // Modules
   installingModules: {
     path: "installing-modules",
-    title: "Installing Modules",
+    title: "Installing NPM Modules",
     category: Categories.modules,
   },
   howToUseModules: {

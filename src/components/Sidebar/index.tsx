@@ -2,7 +2,7 @@ import { useEffect, getLocation, useState, useRoutes, Storage } from "alem";
 import { SidebarAboutLogo, Container } from "./styles";
 import getLinksByCategory from "../../utils/getLinksByCategory";
 import CollapseList from "../CollapseList";
-import { Categories, RoutesPath } from "@app/routes/routeProps";
+import { Categories, RoutesPath } from "@app/modules/routes/routeProps";
 
 const Sidebar = () => {
   const { pathname } = getLocation();
@@ -15,6 +15,7 @@ const Sidebar = () => {
   const [gettingStartedItems, setGettingStartedItems] = useState<(JSX.Element | undefined)[]>([]);
   const [routerItems, setRouterItems] = useState<(JSX.Element | undefined)[]>([]);
   const [modulesItems, setModulesItems] = useState<(JSX.Element | undefined)[]>([]);
+  const [localModulesItems, setLocalModulesItems] = useState<(JSX.Element | undefined)[]>([]);
   const [contextItems, setContextItems] = useState<(JSX.Element | undefined)[]>([]);
   const [apisItems, setApisItems] = useState<(JSX.Element | undefined)[]>([]);
   const [bosItems, setBosItems] = useState<(JSX.Element | undefined)[]>([]);
@@ -23,6 +24,7 @@ const Sidebar = () => {
     const _gettingStartedItems = getLinksByCategory("Getting Started");
     const _routerItems = getLinksByCategory("Router");
     const _modulesItems = getLinksByCategory("Modules");
+    const _localModulesItems = getLinksByCategory("Local Modules");
     const _contextItems = getLinksByCategory("Context");
     const _apisItems = getLinksByCategory("APIs");
     const _bosItems = getLinksByCategory("BOS");
@@ -30,6 +32,7 @@ const Sidebar = () => {
     setGettingStartedItems(_gettingStartedItems);
     setRouterItems(_routerItems);
     setModulesItems(_modulesItems);
+    setLocalModulesItems(_localModulesItems);
     setContextItems(_contextItems);
     setApisItems(_apisItems);
     setBosItems(_bosItems);
@@ -85,7 +88,17 @@ const Sidebar = () => {
 
       <div>
         <CollapseList
-          title="Modules"
+          title="Local Modules"
+          initialState={openCategories.includes(Categories.localModules) ? "open" : "closed"}
+          onClick={(isOpen) => handleOpenRegister(isOpen, Categories.localModules)}
+        >
+          <>{localModulesItems}</>
+        </CollapseList>
+      </div>
+
+      <div>
+        <CollapseList
+          title="NPM Modules"
           initialState={openCategories.includes(Categories.modules) ? "open" : "closed"}
           onClick={(isOpen) => handleOpenRegister(isOpen, Categories.modules)}
         >

@@ -209,28 +209,6 @@ export const AppContainer = styled.div`
 `;
 ```
 
-## Async / Await
-
-The use of `async/await` is supported and experimental. It should be used only in the main scope of the component. It will make changes to the state of the main Widget. Do not use in hooks. Below is an example of usage:
-
-```tsx
-import { fetch, useEffect } from "alem";
-
-const SomeComponent = () => {
-  const fetchItems = async () => {
-    const items = await fetch("https://api.com/items");
-  };
-
-  useEffect(() => {
-    fetchItems();
-  }, []);
-
-  console.log(items);
-
-  return <></>;
-};
-```
-
 # Limitations
 
 ## Import \*
