@@ -1,4 +1,4 @@
-# Installing Modules
+# Installing NPM Modules
 
 The Além Compiler supports the use of external NPM modules through the use of CDN services. To load any external module, create a file `alem.modules.json` in the project root. Example:
 

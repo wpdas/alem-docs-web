@@ -1,5 +1,5 @@
 import { RouteLink, getLocation } from "alem";
-import { RoutesPath, RoutesPathProps } from "../routes/routeProps";
+import { RoutesPath, RoutesPathProps } from "../modules/routes/routeProps";
 
 const getLinksByCategory = (category: string, onItemClick?: () => void) => {
   const { pathname } = getLocation();

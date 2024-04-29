@@ -1,8 +1,8 @@
 import { Router, createRoute, getLocation, useParams } from "alem";
 import { AboutPage } from "../pages/About/About";
-import { RoutesPath } from "./routeProps";
-import nextPrevRoutes from "./nextPrevRoutes";
-import getRouteTitleByPath from "./getRouteTitleByPath";
+import { RoutesPath } from "../modules/routes/routeProps";
+import nextPrevRoutes from "../modules/routes/nextPrevRoutes";
+import getRouteTitleByPath from "../modules/routes/getRouteTitleByPath";
 import { FooterNavContainer, NextPrevButton } from "./styles";
 import FeatureOverview from "@md/FeatureOverview";
 import Installation from "@md/Installation";
@@ -26,6 +26,7 @@ import InstallingModules from "@app/md/modules/InstallingModules";
 import HowToUseModules from "@app/md/modules/HowToUseModules";
 import Environment from "@app/md/Environment";
 import GetAlemEnvironment from "@app/md/api/GetAlemEnvironment";
+import LocalModules from "@app/md/local-modules/LocalModules";
 
 const Routes = () => {
   const urlParams = useParams();
@@ -73,6 +74,9 @@ const Routes = () => {
     // Modules
     createRoute(RoutesPath.installingModules.path, InstallingModules),
     createRoute(RoutesPath.howToUseModules.path, HowToUseModules),
+
+    // Local Modules
+    createRoute(RoutesPath.aboutLocalModules.path, LocalModules),
   ];
 
   return (
