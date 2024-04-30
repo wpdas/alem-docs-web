@@ -17,7 +17,10 @@ const Footer = () => {
       <Row>
         <Description>
           Want to support? Buy me a coffee 😃 <br />
-          <a href="https://app.potlock.org/?tab=project&projectId=alem-lib.near" target="_blank">
+          <a
+            href="https://bos.potlock.org/?tab=project&projectId=alem-lib.near&potId=oss.v1.potfactory.potlock.near"
+            target="_blank"
+          >
             alem-lib.near
           </a>
         </Description>
