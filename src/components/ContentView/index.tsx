@@ -1,12 +1,10 @@
 import { clipboard, getLocation, isDevelopment } from "alem";
+import ShareIcon from "../../assets/svgs/share-icon";
 import Routes from "../../routes/Routes";
 import { Container, Margin, ShareButton, TopSection } from "./styles";
-import ShareIcon from "../../assets/svgs/share-icon";
 
 const ContentView = () => {
-  const site = isDevelopment
-    ? "http://127.0.0.1:8080/alem-lib.near/widget/Index"
-    : "https://alem.dev/";
+  const site = isDevelopment ? "http://127.0.0.1:8080/alem-lib.near/widget/Index" : "https://alem.dev/";
 
   const { pathname } = getLocation();
 
@@ -19,11 +17,7 @@ const ContentView = () => {
       {pathname !== "about" && pathname !== "" && (
         <TopSection>
           <div>
-            <ShareButton
-              data-bs-toggle="modal"
-              data-bs-target="#sharedInfoModal"
-              onClick={copyToCliboard}
-            >
+            <ShareButton data-bs-toggle="modal" data-bs-target="#sharedInfoModal" onClick={copyToCliboard}>
               <ShareIcon />
               Share
             </ShareButton>
