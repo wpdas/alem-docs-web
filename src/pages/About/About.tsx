@@ -1,4 +1,5 @@
 import { RouteLink } from "alem";
+import TelegramIcon from "@app/assets/svgs/telegram-icon.module";
 import { Row } from "../../components/UI";
 import { RoutesPath } from "../../modules/routes/routeProps";
 import {
@@ -15,17 +16,12 @@ import {
   ExampleApp,
   AppsList,
 } from "./styles";
-import TelegramIcon from "@app/assets/svgs/telegram-icon.module";
 
 export const AboutPage = () => {
   return (
     <div>
       <Container style={{ marginBottom: 0 }}>
-        <Logo
-          src="https://cdn.jsdelivr.net/gh/wpdas/alem/docs/assets/near-script-logo.png"
-          width={120}
-          alt="logo"
-        />
+        <Logo src="https://cdn.jsdelivr.net/gh/wpdas/alem/docs/assets/near-script-logo.png" width={120} alt="logo" />
         <Title>Além</Title>
         <Description>The library to build web3 applications for Near BOS</Description>
         <Row>
@@ -48,13 +44,17 @@ export const AboutPage = () => {
           backgroundColor: "#fff",
         }}
       >
-        <p>Some dApps built using this tool</p>
+        <p>
+          Some dApps built using this tool. <br /> Click to visit their repository and get to know more!
+        </p>
         <AppsList>
+          <ExampleApp href="https://github.com/PotLock/bos-app-alem" target="_blank">
+            <img src="https://app.potlock.org/favicon.png" alt="PotLock" />
+            <span>PotLock</span>
+          </ExampleApp>
+
           <ExampleApp href="https://github.com/wpdas/alem-docs-web" target="_blank">
-            <img
-              src="https://cdn.jsdelivr.net/gh/wpdas/alem/docs/assets/near-script-logo.png"
-              alt="Além Docs"
-            />
+            <img src="https://cdn.jsdelivr.net/gh/wpdas/alem/docs/assets/near-script-logo.png" alt="Além Docs" />
             <span>Além Docs</span>
           </ExampleApp>
 
@@ -64,11 +64,6 @@ export const AboutPage = () => {
               alt="Bit Babble"
             />
             <span>Bit Babble</span>
-          </ExampleApp>
-
-          <ExampleApp href="https://github.com/PotLock/bos-app-alem" target="_blank">
-            <img src="https://app.potlock.org/favicon.png" alt="PotLock" />
-            <span>PotLock</span>
           </ExampleApp>
         </AppsList>
       </Section>
@@ -80,32 +75,31 @@ export const AboutPage = () => {
         />
 
         <p>
-          You can create your applications in a similar way to React. All components and other
-          resources will be transformed into a file understandable by Near VM.
+          You can create your applications in a similar way to React. All components and other resources will be
+          transformed into a file understandable by Near VM.
         </p>
       </Section>
       <Section>
         <Title>Create user interfaces from components</Title>
         <p>
-          Alem use its compiler to let you build user interfaces out of individual pieces. Create
-          your own components like <Code>Thumbnail</Code>, <Code>LikeButton</Code>, and{" "}
-          <Code>Avatar</Code>. Then combine them into entire screens, pages, and other components.
+          Alem use its compiler to let you build user interfaces out of individual pieces. Create your own components
+          like <Code>Thumbnail</Code>, <Code>LikeButton</Code>, and <Code>Avatar</Code>. Then combine them into entire
+          screens, pages, and other components.
         </p>
       </Section>
       <Section style={{ backgroundColor: "#fff" }}>
         <Title>Stateless & Stateful Component</Title>
         <p>
-          Leverage the full power of JSX to create your components easily, quickly, and efficiently.
-          Both stateful and stateless components <BlueCode>support children</BlueCode>, which is not
-          natively supported by the Near VM, but Além handles this in a way that it is processed and
-          understood.
+          Leverage the full power of JSX to create your components easily, quickly, and efficiently. Both stateful and
+          stateless components <BlueCode>support children</BlueCode>, which is not natively supported by the Near VM,
+          but Além handles this in a way that it is processed and understood.
         </p>
       </Section>
       <Section>
         <Title>Network</Title>
         <p>
-          Currently supports <Code>Mainnet</Code> and <Code>Testnet</Code>. So, while you are
-          developing and testing features you can test everything without worrying about expenses.
+          Currently supports <Code>Mainnet</Code> and <Code>Testnet</Code>. So, while you are developing and testing
+          features you can test everything without worrying about expenses.
         </p>
       </Section>
     </div>

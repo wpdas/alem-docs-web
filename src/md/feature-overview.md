@@ -6,16 +6,6 @@ Alem makes it painless to create interactive UIs. Design simple views for each s
 
 Build encapsulated components that manage their own state, then compose them to make complex UIs. Since component logic is written in JavaScript, you can easily pass rich data through your app.
 
-**Tip:** Use function as much as possible. Even if it is an object to be shared, use a function to return the object. E.g.:
-
-```ts
-export const utils = () => ({
-  contractId: "contract-foo.near",
-  getItems: () => Storage.get("items"),
-  // ...
-});
-```
-
 ## Component
 
 You can create any component file using **JavaScript** or **TypeScript**. The entrypoint must be an App component like so:
@@ -90,8 +80,8 @@ Now, let's implement the component that is going to import both components above
 ```tsx
 // Stateful component
 import { State, state } from "alem";
-import Hero from "./Hero";
 import Footer from "./Footer";
+import Hero from "./Hero";
 
 const MyStatefulComponent = () => {
   State.init({ version: 1 }); // Any random information

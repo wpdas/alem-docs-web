@@ -1,16 +1,10 @@
-import { RouterContext, Storage, asyncFetch, useEffect, useState } from "alem";
-import Modals from "./components/Modals/Modals";
-import {
-  AppBackground,
-  AppContainer,
-  Banner,
-  MobileNavBarSwitcher,
-  SideBarSwitcher,
-} from "./styles";
-import MobileNavBar from "./components/MobileNavBar";
-import Sidebar from "./components/Sidebar";
-import ContentView from "./components/ContentView";
+import { RouterContext, Storage, asyncFetch, props, useEffect, useState } from "alem";
 import Footer from "@app/components/Footer/Footer";
+import ContentView from "./components/ContentView";
+import MobileNavBar from "./components/MobileNavBar";
+import Modals from "./components/Modals/Modals";
+import Sidebar from "./components/Sidebar";
+import { AppBackground, AppContainer, Banner, MobileNavBarSwitcher, SideBarSwitcher } from "./styles";
 
 const Main = () => {
   const [libVersion, setLibVersion] = useState(Storage.get("version"));
@@ -28,7 +22,7 @@ const Main = () => {
     <div style={{ marginTop: "calc(-1 * var(--body-top-padding, 0))" }}>
       <Modals />
       <Banner>
-        Alem is currently on version <span>{libVersion}</span>
+        Além is currently on version <span>{libVersion}</span>
       </Banner>
       <MobileNavBarSwitcher>
         <MobileNavBar />
