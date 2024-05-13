@@ -12,7 +12,6 @@ import {
   CustomLink,
   CustomAnchor,
   BlueCode,
-  RedCode,
   ExampleApp,
   AppsList,
 } from "./styles";
