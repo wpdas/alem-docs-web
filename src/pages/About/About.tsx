@@ -26,7 +26,7 @@ export const AboutPage = () => {
         <Row>
           <CustomLink href="https://t.me/alemlib" target="_blank">
             <TelegramIcon fill="white" />
-            <p style={{ marginLeft: 8 }}>Installation</p>
+            <p style={{ marginLeft: 8 }}>Telegram</p>
           </CustomLink>
 
           <CustomAnchor>
