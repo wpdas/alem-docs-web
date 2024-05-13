@@ -2,7 +2,7 @@
 
 The native NEAR VM (BOS) resources continue to function.
 
-Get to know more about the BOS built in resources here: [https://docs.near.org/bos/api/state](https://docs.near.org/bos/api/state)
+Get to know more about the BOS built in resources here: [https://docs.near.org/build/near-components/anatomy/state](https://docs.near.org/build/near-components/anatomy/state)
 
 ```tsx
 // NOTE: These are just the BOS feature references types

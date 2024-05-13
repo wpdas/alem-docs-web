@@ -12,7 +12,6 @@ import {
   CustomLink,
   CustomAnchor,
   BlueCode,
-  RedCode,
   ExampleApp,
   AppsList,
 } from "./styles";
@@ -27,7 +26,7 @@ export const AboutPage = () => {
         <Row>
           <CustomLink href="https://t.me/alemlib" target="_blank">
             <TelegramIcon fill="white" />
-            <p style={{ marginLeft: 8 }}>Telegram</p>
+            <p style={{ marginLeft: 8 }}>Installation</p>
           </CustomLink>
 
           <CustomAnchor>
