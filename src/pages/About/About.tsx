@@ -38,7 +38,7 @@ export const AboutPage = () => {
         style={{
           marginTop: 40,
           paddingTop: 20,
-          paddingBottom: 50,
+          paddingBottom: 10,
           marginBottom: 60,
           backgroundColor: "#fff",
         }}
@@ -50,6 +50,14 @@ export const AboutPage = () => {
           <ExampleApp href="https://github.com/PotLock/bos-app-alem" target="_blank">
             <img src="https://app.potlock.org/favicon.png" alt="PotLock" />
             <span>PotLock</span>
+          </ExampleApp>
+
+          <ExampleApp href="https://github.com/wpdas/nextly-alem-template" target="_blank">
+            <img
+              src="https://ipfs.near.social/ipfs/bafkreigamd4f4t3vkhlkwu6bw2mzlvpnqwdcovjxxxoodrhsjhije3oyn4"
+              alt="Nextly Template"
+            />
+            <span>Nextly Template</span>
           </ExampleApp>
 
           <ExampleApp href="https://github.com/wpdas/alem-docs-web" target="_blank">
@@ -66,12 +74,31 @@ export const AboutPage = () => {
           </ExampleApp>
         </AppsList>
       </Section>
-      <Section style={{ backgroundColor: "#fff", paddingTop: 40 }}>
+
+      <Section style={{ backgroundColor: "#fff", paddingBottom: 0 }}>
+        <p className="project-title">PotLock</p>
         <img
+          src="https://ipfs.near.social/ipfs/bafkreibctv5y3ypwedoml6z7bsoy45fa5p5tbnkcimbzkap7lnb7lhswb4"
+          width="100%"
+          alt="PotLock"
+        />
+      </Section>
+
+      <Section style={{ backgroundColor: "#fff" }}>
+        <p className="project-title">Nextly Template: Além & Tailwind</p>
+        <img
+          src="https://user-images.githubusercontent.com/1884712/121497169-03228680-c990-11eb-975a-e77fddc43de0.png"
+          width="100%"
+          alt="Nextly Template built with Além & Tailwind"
+        />
+      </Section>
+
+      <Section style={{ backgroundColor: "#fff", paddingBottom: 60, paddingTop: 0 }}>
+        {/* <img
           src="https://cdn.jsdelivr.net/gh/wpdas/alem-docs-web/src/md/assets/diagram.jpg"
           width="100%"
           alt="Diagram"
-        />
+        /> */}
 
         <p>
           You can create your applications in a similar way to React. All components and other resources will be

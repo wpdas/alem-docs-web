@@ -94,6 +94,11 @@ export const Section = styled.div`
     font-weight: 500;
     margin-top: 1.75rem;
   }
+
+  .project-title {
+    align-self: start;
+    font-size: 16px;
+  }
 `;
 
 export const Code = styled.span`

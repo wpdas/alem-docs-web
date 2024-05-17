@@ -38,6 +38,11 @@ export const RoutesPath = {
     title: "CSS Files",
     category: Categories.gettingStarted,
   },
+  tailwind: {
+    path: "tailwind",
+    title: "Tailwind Setup",
+    category: Categories.gettingStarted,
+  },
   cli: {
     path: "cli",
     title: "CLI",
