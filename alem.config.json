@@ -29,5 +29,10 @@
   },
   "options": {
     "hideAlemBar": true
+  },
+  "plugins": {
+    "tailwind": {
+      "css": "src/globals.css"
+    }
   }
 }

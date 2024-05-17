@@ -37,3 +37,19 @@ yarn create alem-dapp my-app --template typescript
 cd my-app
 yarn start
 ```
+
+### TypeScript with Tailwind
+
+```sh
+# Npx
+npx create-alem-dapp my-app --template typescript-tailwind
+cd my-app
+npm start
+```
+
+```sh
+# Yarn
+yarn create alem-dapp my-app --template typescript-tailwind
+cd my-app
+yarn start
+```

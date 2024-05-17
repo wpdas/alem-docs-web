@@ -18,10 +18,21 @@ const nextPrevRoutes = () => ({
 
   [RoutesPath.configFile.path]: {
     prev: RoutesPath.installation.path,
+    next: RoutesPath.cssFiles.path,
+  },
+
+  [RoutesPath.cssFiles.path]: {
+    prev: RoutesPath.configFile.path,
+    next: RoutesPath.tailwind.path,
+  },
+
+  [RoutesPath.tailwind.path]: {
+    prev: RoutesPath.cssFiles.path,
     next: RoutesPath.cli.path,
   },
+
   [RoutesPath.cli.path]: {
-    prev: RoutesPath.configFile.path,
+    prev: RoutesPath.tailwind.path,
     next: RoutesPath.deployingWithGithubActions.path,
   },
 

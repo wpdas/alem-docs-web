@@ -146,3 +146,21 @@ Inside the `alem.config.json` file add the list of part of file names you want t
 ```
 
 In the example above, any file that has "styles" as part of its name will be ignored and will be compiled as a normal file (script file, stateless component or stateful component).
+
+# Tailwind Setup
+
+Go to the [Tailwind Setup](https://alem.dev/?path=tailwind) session to know more.
+
+## Chaging the Main CSS File
+
+You can change the main css file used by tailwind, to do this, add the following session in the `alem.config.json` file:
+
+```json
+"plugins": {
+    "tailwind": {
+      "css": "src/globals.css"
+    }
+  }
+```
+
+Replace `src/globals.css` with the file you want to use.
