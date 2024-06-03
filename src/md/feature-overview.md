@@ -40,8 +40,6 @@ export const ComponentC = (componentProps: { name: string }) => {
 };
 ```
 
-# Good to Know
-
 ## Stateful & Stateless Components
 
 Stateful components are interpreted as Widgets by Além, while Stateless components are seen as auxiliary resources injected into the Widgets that import them.
@@ -94,6 +92,24 @@ const MyStatefulComponent = () => {
     </>
   );
 };
+```
+
+## Stateless As Stateful
+
+Compile a stateless component as stateful. This will not add states to the component. When using this method, the component is generated as a Widget. This setting can also be useful to force the file to be created separately if you configure the project to create separate files for stateful components.
+
+To force transform a stateless component into a stateful one, simply add the following signature `"as stateful";` at the top, for example:
+
+```jsx
+"as stateful";
+
+const Spinner = () => (
+  <div className="spinner-border" role="status">
+    <span className="visually-hidden">Loading...</span>
+  </div>
+);
+
+export default Spinner;
 ```
 
 ## TSX & JSX

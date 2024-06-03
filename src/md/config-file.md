@@ -77,7 +77,21 @@ import Footer from "@components/Footer";
 
 It is possible to configure some compiler behaviors using the options session.
 
-## Create Loader Widget
+## Creating Separate File For Each Stateful Component
+
+Configuration to separate stateful components. This causes each stateful component to be generated in a separate file. Use the `alem.config.json` file to set the following configuration:
+
+ ```js
+options: {
+  ejectStatefulComponents: true
+}
+```
+
+Result: 
+
+![separate-components](https://github.com/wpdas/alem/assets/3761994/bb7068e1-a586-4928-b1fe-dff38ac0f87e)
+
+## Creating Loader Widget
 
 This feature allows you to create an additional Widget that will serve as a Loader for the main Widget. You can optionally define which component will serve as the Loading display while the main Widget content is loaded. If no file is provided, the default Loading component of Além will be used.
 
