@@ -28,6 +28,7 @@
     }
   },
   "options": {
+    "ejectStatefulComponents": false,
     "hideAlemBar": true
   },
   "plugins": {
